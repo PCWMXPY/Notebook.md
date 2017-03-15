@@ -1,5 +1,5 @@
 # NoteWithGit
-
+- Recreated to remove trash stars and forks
 ### Notice
 
 -   We are re-building it with Vue-Router
