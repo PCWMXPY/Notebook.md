@@ -1,0 +1,11 @@
+.router-link-active {
+    color: red;
+    /*background-color: red;*/
+    font-weight: 600;
+}
+
+.nbmd-nav {
+    /*background-color: gray;*/
+    height: 100%;
+    margin: 0px;
+}
