@@ -6,9 +6,6 @@
  * @contect wm@wmpcxpy.com
  */
 const homerouter = {
-    // template: function (resolve) {
-    //     require(['../Pages/home.vue'], resolve);
-    // }
     template: home.temperate,
     data: function () {
         return home.data;
