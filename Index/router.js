@@ -5,9 +5,12 @@
  * @author WMXPY
  * @contect wm@wmpcxpy.com
  */
-const home = {
-    template: '<div>this is home page</div>'
-};
+// const home = {
+//     // template: function (resolve) {
+//     //     require(['../Pages/home.vue'], resolve);
+//     // }
+//     template: '<div>this is home page</div>'
+// };
 const news = {
     template: '<div>this is news page</div>'
 };
@@ -16,7 +19,7 @@ const about = {
 };
 const routes = [{
         path: '/home',
-        component: home
+        component: require('../Pages/home.vue')
     },
     {
         path: '/news',
@@ -28,7 +31,6 @@ const routes = [{
     },
 ];
 const router = new VueRouter({
-    // routes // （缩写）相当于 routes: routes
     routes: routes
 });
 const app_router = new Vue({
