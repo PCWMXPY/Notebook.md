@@ -5,29 +5,39 @@
  * @author WMXPY
  * @contect wm@wmpcxpy.com
  */
-// const home = {
-//     // template: function (resolve) {
-//     //     require(['../Pages/home.vue'], resolve);
-//     // }
-//     template: '<div>this is home page</div>'
-// };
-const news = {
-    template: '<div>this is news page</div>'
+const homerouter = {
+    // template: function (resolve) {
+    //     require(['../Pages/home.vue'], resolve);
+    // }
+    template: home.temperate,
+    data: function () {
+        return home.data;
+    }
 };
-const about = {
-    template: '<div>this is about page</div>'
+const newsrouter = {
+    template: news.temperate,
+    data: function () {
+        return news.data;
+    }
 };
+const aboutrouter = {
+    template: about.temperate,
+    data: function () {
+        return about.data;
+    }
+};
+
 const routes = [{
         path: '/home',
-        component: require('../Pages/home.vue')
+        component: homerouter
     },
     {
         path: '/news',
-        component: news
+        component: newsrouter
     },
     {
         path: '/about',
-        component: about
+        component: aboutrouter
     },
 ];
 const router = new VueRouter({
