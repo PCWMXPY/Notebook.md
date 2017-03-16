@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="height:100%;">
+<html lang="en">
 
 <head>
     <title>Notebook.md</title>
@@ -11,25 +11,24 @@
     <link href="./index.css" rel="stylesheet">
 </head>
 
-<body style="height:100%;">
-    <div style="height:100%;">
-        <div style="height:100%;" class="container-fluid">
-            <div class="row" style="height:100%;" id="main">
-                <div class="col-md-3 nav nbmd-nav">
-                    <router-link class="button button-block" to="/home" exact>HOME</router-link>
-                    <router-link class="button button-block" to="/news" exact>NEWS</router-link>
-                    <router-link class="button button-block" to="/about" exact>ABOUT</router-link>
-                </div>
-                <div class="col-md-9">
-                    <h1>Hello Vue</h1>
-                    <router-view></router-view>
-                </div>
+<body>
+    <div class="container-fluid">
+        <div class="row" id="main">
+            <div class="col-sm-3 nav">
+                <router-link class="button button-block" to="/home" exact>HOME</router-link>
+                <router-link class="button button-block" to="/news" exact>NEWS</router-link>
+                <router-link class="button button-block" to="/about" exact>ABOUT</router-link>
+            </div>
+            <div class="col-sm-7">
+                <h1>Hello Vue</h1>
+                <router-view></router-view>
             </div>
         </div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.3.0/vue-router.js"></script>
+<script src="./router.js"></script>
 <script src="./index.js"></script>
 
 </html>
