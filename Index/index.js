@@ -16,7 +16,7 @@ const news = {
     data: {
         message: 'test'
     },
-    temperate: '<div id="home">this is news page{{message}}</div>'
+    temperate: '<div id="home" v-html="message">this is news page</div>'
 }
 const about = {
     data: {
