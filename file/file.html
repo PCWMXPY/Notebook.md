@@ -16,8 +16,24 @@
             reader.onloadend = function () {
                 console.log(reader.result);
             };
-            reader.readAsText(this.files[0]);
+            console.log(this.files);
+            reader.readAsDataURL(this.files[0]);
+            var a = document.createElement('a');
+            const url = window.URL.createObjectURL(this.files[0]);
+            var filename = this.files[0].name;
+            a.href = url;
+            a.download = filename;
+            a.click();
+            window.URL.revokeObjectURL(url);
         };
+        const Cf$ = {
+            read: function (file) {
+
+            },
+            download: function (file) {
+
+            }
+        }
     </script>
 </body>
 
