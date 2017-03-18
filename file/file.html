@@ -9,16 +9,14 @@
 
 <body>
     <!--<input type='file' multiple />-->
-    <input type='file' />
+    <input id="input" type='file' />
     <script>
-        document.querySelector('input').onchange = function () {
-            console.log(this.files[0]);
+        document.getElementById('input').onchange = function () {
             const reader = new FileReader();
             reader.onloadend = function () {
-                console.log(1);
                 console.log(reader.result);
             };
-            console.log(reader.readAsText(this.files[0]));
+            reader.readAsText(this.files[0]);
         };
     </script>
 </body>
