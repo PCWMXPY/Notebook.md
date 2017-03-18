@@ -12,28 +12,14 @@
     <input id="input" type='file' />
     <script>
         document.getElementById('input').onchange = function () {
-            console.log(Cf$.read(this.files[0], function (filedata) {
+            Cf$.read({
+                mode: 'Text',
+                file: this.files[0]
+            }, function (filedata) {
                 console.log(filedata)
-            }));
+            });
             // console.log(Cf$.download(this.files[0], this.files[0].name));
         };
-        const Cf$ = {
-            read: function (file, endfunction) {
-                const reader = new FileReader();
-                reader.onloadend = function () {
-                    return reader.result;
-                };
-                reader.readAsDataURL(file);
-            },
-            download: function (file, filename) {
-                const a = document.createElement('a');
-                const url = window.URL.createObjectURL(file);
-                a.href = url;
-                a.download = filename;
-                a.click();
-                window.URL.revokeObjectURL(url);
-            }
-        }
     </script>
 </body>
 
