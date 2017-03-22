@@ -11,9 +11,9 @@ jQuery(document).ready(function () {
 let main = new Vue({
     el: '#main',
     data: {
-
+        welcome: '试题复习网站'
     },
-    method: {
+    methods: {
         donate: function () {
             Ca$.get({
                 url: '../php/tget.php',
