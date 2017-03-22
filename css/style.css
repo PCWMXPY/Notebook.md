@@ -21,6 +21,22 @@
     font-size: 66px;
 }
 
+.re-button {
+    width: 100%;
+    margin-top: 5px;
+    background-color: #00d6ff;
+}
+
+
+/*.re-button:hover {
+    background-color: #ffac00;
+}*/
+
+.re-buttons {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 .re-bot {
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
