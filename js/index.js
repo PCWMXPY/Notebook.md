@@ -16,7 +16,7 @@ let main = new Vue({
     methods: {
         donate: function () {
             Ca$.get({
-                url: '../php/tget.php',
+                url: './php/tget.php',
                 data: {
                     test: 'test'
                 },
@@ -25,7 +25,7 @@ let main = new Vue({
                 }
             });
             Ca$.post({
-                url: '../php/tpost.php',
+                url: './php/tpost.php',
                 data: {
                     test: 'test'
                 },
