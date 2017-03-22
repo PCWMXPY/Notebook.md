@@ -12,19 +12,20 @@
     overflow: hidden;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    background-color: #00d6ff;
+    background-color: #9ea3c6;
 }
 
 .re-right {
     float: right;
     width: 10%;
     font-size: 66px;
+    color: #00ff9e
 }
 
 .re-button {
     width: 100%;
     margin-top: 5px;
-    background-color: #00d6ff;
+    background-color: #9ea3c6;
 }
 
 
@@ -40,7 +41,7 @@
 .re-bot {
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    background-color: #d8ff74;
+    background-color: #3d3d3d;
 }
 
 .re-title {
@@ -68,9 +69,9 @@ h2 {
 }
 
 .backstretch {
-    -moz-filter: blur(8px);
-    -webkit-filter: blur(8px);
-    -o-filter: blur(8px);
-    -ms-filter: blur(8px);
-    filter: blur(8px);
+    -moz-filter: blur(15px);
+    -webkit-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
 }
