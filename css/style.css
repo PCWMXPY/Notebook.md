@@ -8,6 +8,18 @@
     margin-left: 2em;
 }
 
+.re-h2 {
+    color: #430202;
+}
+
+input.re-input {
+    background: #9ea3c6;
+    border-bottom-color: black;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    HEIGHT: 80%;
+}
+
 .re-top {
     overflow: hidden;
     border-top-left-radius: 1em;

@@ -9,7 +9,26 @@ jQuery(document).ready(function () {
     $.backstretch("../imgs/indexbg.jpg");
 });
 
-console.log(getURLVar('mode'));
+let title = new Vue({
+    el: '#title',
+    data: {
+        mode: getURLVar('mode')
+    },
+    computed: {
+        topofpage: function () {
+            switch (this.mode) {
+                case 'mcode':
+                    return 0;
+                    break;
+                default:
+                    return 2;
+            }
+        }
+    },
+    methods: {
+
+    }
+})
 
 function getURLVar(name) {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
