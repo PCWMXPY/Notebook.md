@@ -23,6 +23,7 @@ let title = new Vue({
     methods: {
         getquestions: function (tname) {
             this.mode = 'answer';
+            this.testname = 'THTRE 110 Final';
         }
     }
 });
