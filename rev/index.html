@@ -39,7 +39,28 @@
         </div>
         <div class="row" id="main">
             <div class="col-sm-10 col-sm-offset-1 re-bot">
-                -
+                <div v-for="(i, index) in tests">
+                    <strong v-if="index%10 == 0">Chapter {{index/10 + 1}}</strong>
+                    <!--<strong v-if="index<= 9&&index%10 == 0"><br>这部分是以前的题，咱们没有做过这一章的TopHat</strong>-->
+                    <p>{{i.question}}</p>
+                    <input type="checkbox" v-model="i.sol[0]"></input>
+                    <label>{{i.a}}</label>
+                    <br>
+                    <input type="checkbox" v-model="i.sol[1]"></input>
+                    <label>{{i.b}}</label>
+                    <br>
+                    <input type="checkbox" v-bind:class="i.showc" v-model="i.sol[2]"></input>
+                    <label v-bind:class="i.showc">{{i.c}}</label>
+                    <br>
+                    <input type="checkbox" v-bind:class="i.showd" v-model="i.sol[3]"></input>
+                    <label v-bind:class="i.showd">{{i.d}}</label>
+                    <br>
+                    <input type="checkbox" v-bind:class="i.showe" v-model="i.sol[4]"></input>
+                    <label v-bind:class="i.showe"> {{i.e}}</label>
+                    <button v-on:click="gradethis(i)">GradeThis</button>
+                    <strong style="color: red;">{{i.correctorwrong}}</strong>
+                </div>
+                <button v-on:click="grade">Grade my work</button>
             </div>
         </div>
     </div>

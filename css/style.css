@@ -71,6 +71,11 @@ input.re-input {
     margin-top: 5%;
 }
 
+.re-title-xs {
+    /*filter: blur(1px);*/
+    margin-top: 3%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
