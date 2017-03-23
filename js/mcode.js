@@ -6,35 +6,23 @@
  * @contect wm@wmpcxpy.com
  */
 jQuery(document).ready(function () {
-    const questioncode = getURLVar('code');
-    if (questioncode != null) {
-        title.tname = getURLVar('code');
-    }
+    if (getURLVar('code') != null) title.tname = getURLVar('code');
+    if (getURLVar('mode') != null) title.mode = getURLVar('mode');
     $.backstretch("../imgs/indexbg.jpg");
 });
 
 let title = new Vue({
     el: '#title',
     data: {
-        mode: getURLVar('mode'),
+        mode: '',
         testname: '',
         tname: '',
         questions: []
     },
-    computed: {
-        topofpage: function () {
-            switch (this.mode) {
-                case 'mcode':
-                    return 0;
-                    break;
-                default:
-                    return 2;
-            }
-        }
-    },
+    computed: {},
     methods: {
         getquestions: function (tname) {
-
+            this.mode = 'answer';
         }
     }
 });
@@ -74,20 +62,10 @@ let app = new Vue({
             this.tests.push(thatquestion);
         },
         grade: function () {
-            for (var i = 0; i < this.tests.length; i++) {
-                if (this.tests[i].sol[this.tests[i].correct] == true) {
-                    this.tests[i].correctorwrong = 'Correct';
-                } else {
-                    this.tests[i].correctorwrong = 'Wrong';
-                }
-            }
+
         },
         gradethis: function (i) {
-            if (i.sol[i.correct] == true) {
-                i.correctorwrong = 'Correct';
-            } else {
-                i.correctorwrong = 'Wrong';
-            }
+
         }
     }
 })

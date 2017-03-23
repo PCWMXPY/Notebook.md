@@ -71,6 +71,10 @@ input.re-input {
     margin-top: 5%;
 }
 
+.re-questions {
+    color: #ffdac0;
+}
+
 .re-title-xs {
     /*filter: blur(1px);*/
     margin-top: 3%;
