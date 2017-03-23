@@ -12,7 +12,8 @@ jQuery(document).ready(function () {
 let title = new Vue({
     el: '#title',
     data: {
-        mode: getURLVar('mode')
+        mode: getURLVar('mode'),
+        testname: ''
     },
     computed: {
         topofpage: function () {

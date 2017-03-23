@@ -11,6 +11,7 @@ jQuery(document).ready(function () {
 let main = new Vue({
     el: '#main',
     data: {
+        languages: 'chinese',
         welcome: '试题复习网站'
     },
     methods: {
@@ -33,6 +34,9 @@ let main = new Vue({
             //         console.log('test' + data);
             //     }
             // });
+        },
+        language: function () {
+            console.log('test');
         },
         reimport: function () {
             window.location.href = './rev/?mode=import';

@@ -61,6 +61,11 @@ input.re-input {
     margin-top: 10%;
 }
 
+.re-title-sm {
+    /*filter: blur(1px);*/
+    margin-top: 5%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;

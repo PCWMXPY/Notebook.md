@@ -22,10 +22,11 @@
         </div>
         <div id="main">
             <div class="row" style="margin-top:2em;">
-                <div class="col-sm-8 col-sm-offset-2 re-top">
+                <div class="col-md-8 col-md-offset-2 re-top">
                     <div class="re-box">
                         <h2>Review.md 是一个<strong>{{welcome}}</strong></h2>
-                        <a v-on:click="donate"> 为 Review.md 提供灵感</a>
+                        <a v-on:click="donate"> 为 Review.md 提供灵感</a><br>
+                        <a v-on:click="language">Discover Review.md in <strong>English</strong></a>
                     </div>
                     <div class="re-right">
                         <i class="fa fa-2x fa-magnet"></i>
@@ -33,7 +34,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 re-bot">
+                <div class="col-md-8 col-md-offset-2 re-bot">
                     <div class="re-buttons">
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="reimport">导入题库文件</button>
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="recreate">创建题库文件</button>

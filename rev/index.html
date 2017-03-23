@@ -14,18 +14,29 @@
 
 <body>
     <div class="container-fluid">
+        <div class="row re-title-sm">
+            <div class="col-sm-5 col-sm-offset-1">
+                <a style="color:aquamarine;" href="../"><i class="fa fa-arrow-left"></i>&nbsp;返回</a>
+            </div>
+        </div>
         <div class="row" id="title">
-            <div class="col-sm-10 col-sm-offset-1 re-title re-top re-h2">
+            <div class="col-sm-10 col-sm-offset-1 re-top re-h2">
                 <div v-if="topofpage == 0" class="re-box">
-                    输入题库ID
-                    <input class="re-input" />
+                    <h2>输入题库ID
+                        <input class="re-input" /></h2>
                 </div>
-                <div v-if="topofpage == 2">
+                <div v-else-if="topofpage == 1" class="re-box">
+                    {{testname}}
+                </div>
+                <div v-else>
                     出现了错误
                 </div>
             </div>
         </div>
         <div class="row" id="main">
+            <div class="col-sm-10 col-sm-offset-1 re-bot">
+                -
+            </div>
         </div>
     </div>
 </body>
