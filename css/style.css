@@ -5,7 +5,7 @@
 .re-box {
     float: left;
     text-align: left;
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
 .re-h2 {
@@ -31,7 +31,12 @@ input.re-input {
     float: right;
     width: 10%;
     font-size: 66px;
-    color: #00ff9e
+    color: #00ff9e;
+}
+
+.re-mainright {
+    float: right;
+    width: 1%;
 }
 
 .re-button {

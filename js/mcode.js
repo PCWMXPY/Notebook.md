@@ -6,6 +6,10 @@
  * @contect wm@wmpcxpy.com
  */
 jQuery(document).ready(function () {
+    const questioncode = getURLVar('code');
+    if (questioncode != null) {
+        title.tname = getURLVar('code');
+    }
     $.backstretch("../imgs/indexbg.jpg");
 });
 
@@ -13,7 +17,8 @@ let title = new Vue({
     el: '#title',
     data: {
         mode: getURLVar('mode'),
-        testname: ''
+        testname: '',
+        tname: ''
     },
     computed: {
         topofpage: function () {
@@ -27,7 +32,9 @@ let title = new Vue({
         }
     },
     methods: {
+        getquestions: function (tname) {
 
+        }
     }
 })
 

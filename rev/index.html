@@ -22,14 +22,18 @@
         <div class="row" id="title">
             <div class="col-sm-10 col-sm-offset-1 re-top re-h2">
                 <div v-if="topofpage == 0" class="re-box">
-                    <h2>输入题库ID
-                        <input class="re-input" /></h2>
+                    <h2>题库ID:
+                        <input v-model="tname" class="re-input" />
+                        <button class="button button-rounded"><i class="fa fa-download"></i>&nbsp;下载题库</button></h2>
                 </div>
-                <div v-else-if="topofpage == 1" class="re-box">
+                <div v-else-if="topofpage == 1" class="re-box col-sm-8">
                     {{testname}}
                 </div>
-                <div v-else>
+                <div class="re-box col-sm-8" v-else>
                     出现了错误
+                </div>
+                <div class="re-mainright">
+                    <i class="fa fa-cube"></i>
                 </div>
             </div>
         </div>
