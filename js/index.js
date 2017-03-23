@@ -15,25 +15,33 @@ let main = new Vue({
     },
     methods: {
         donate: function () {
-            Ca$.get({
-                url: './php/tget.php',
-                data: {
-                    test: 'test'
-                },
-                success: function (data) {
-                    console.log('test' + data);
-                }
-            });
-            Ca$.post({
-                url: './php/tpost.php',
-                data: {
-                    test: 'test'
-                },
-                success: function (data) {
-                    console.log('test' + data);
-                }
-            });
-
+            // Ca$.get({
+            //     url: './php/tget.php',
+            //     data: {
+            //         test: 'test'
+            //     },
+            //     success: function (data) {
+            //         console.log('test' + data);
+            //     }
+            // });
+            // Ca$.post({
+            //     url: './php/tpost.php',
+            //     data: {
+            //         test: 'test'
+            //     },
+            //     success: function (data) {
+            //         console.log('test' + data);
+            //     }
+            // });
+        },
+        reimport: function () {
+            window.location.href = './rev/?mode=import';
+        },
+        recreate: function () {
+            window.location.href = './create/?mode=create';
+        },
+        remcode: function () {
+            window.location.href = './rev/?mode=mcode';
         }
     }
 })
