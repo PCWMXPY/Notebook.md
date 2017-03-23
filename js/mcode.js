@@ -21,9 +21,12 @@ let title = new Vue({
     },
     computed: {},
     methods: {
-        getquestions: function (tname) {
+        getquestions: function () {
             this.mode = 'answer';
             this.testname = 'THTRE 110 Final';
+        },
+        fixvariable: function () {
+            this.mode = 'mcode';
         }
     }
 });

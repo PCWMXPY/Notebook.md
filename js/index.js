@@ -44,8 +44,14 @@ let main = new Vue({
         recreate: function () {
             window.location.href = './create/?mode=create';
         },
-        remcode: function () {
-            window.location.href = './rev/?mode=mcode';
+        remcode: function (events, code) {
+            console.log(code);
+            if (code == undefined) {
+                window.location.href = './rev/?mode=mcode';
+            } else {
+                window.location.href = './rev/?mode=mcode&code=' + code;
+            }
+
         }
     }
 })

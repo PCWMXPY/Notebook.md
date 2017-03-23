@@ -24,13 +24,18 @@
                 <div v-if="mode == 'mcode'" class="re-box">
                     <h2>题库ID:
                         <input v-model="tname" class="re-input" />
-                        <button v-on:click="getquestions" class="button button-rounded"><i class="fa fa-download"></i>&nbsp;下载题库</button></h2>
+                        <button v-on:click="getquestions" class="button button-rounded"><i class="fa fa-download"></i>&nbsp;下载题库</button>
+                    </h2>
                 </div>
-                <div v-else-if="mode == 'answer'" class="re-box col-sm-8">
-                    <h2>{{testname}}</h2>
+                <div v-else-if="mode == 'answer'" class="re-box">
+                    <h2>
+                        {{testname}}
+                    </h2>
                 </div>
-                <div class="re-box col-sm-8" v-else>
-                    出现了错误
+                <div v-else class="re-box">
+                    <h2>浏览器或许不被支持
+                        <button v-on:click="fixvariable" class="button button-rounded"><i class="fa fa-angle-double-down"></i>&nbsp;输入代码</button>
+                    </h2>
                 </div>
                 <div class="re-mainright">
                     <i class="fa fa-cube"></i>
