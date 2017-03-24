@@ -68,7 +68,6 @@ function URLencode(sStr) {
     return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
 
 }
-
 // const teststring = JSON.stringify(testobject);
 // console.log(teststring);
 // console.log(URLencode(teststring));
