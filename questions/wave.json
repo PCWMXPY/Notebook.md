@@ -1,8 +1,9 @@
 [{
     "examname": "testexam2",
     "mcode": "testexam",
+    "visits": 3,
     "questions": [{
-        "question": "what is the answer of 1 1",
+        "question": "what is the answer of 1+1",
         "description": "test description",
         "answer": ["2", "QBA", "THIRD", 888, "fivth"],
         "correct": 0
