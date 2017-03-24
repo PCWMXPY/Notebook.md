@@ -22,7 +22,7 @@ const testfunctions = {
                 correct: 3
             }
         ]
-    };
+    },
     addtestquestiontophp: function () {
         featurefunctions.uploadtoserver('testexam2', 'testexam', [{
                 question: 'what is the answer of 1+1',
