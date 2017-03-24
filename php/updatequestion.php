@@ -4,8 +4,10 @@
 * @contect wm@wmpcxpy.com
 */
 $question = $_POST['json'];
+echo $question;
 $question = json_decode($question);
 $json = file_get_contents('../questions/wave.json');
+echo $json;
 $json = json_decode($json);
 $buffer = 0;
 for($x=0;$x<count($json);$x++){

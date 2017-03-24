@@ -23,8 +23,8 @@
             <div class="col-sm-10 col-sm-offset-1 re-top re-h2">
                 <div v-if="mode == 'mcode'" class="re-box">
                     <h2>题库ID:
-                        <input v-model="tname" class="re-input" />
-                        <button v-on:click="getquestions" class="button button-rounded"><i class="fa fa-download"></i>&nbsp;下载题库</button>
+                        <input v-model="tname" class="re-input" />&nbsp;
+                        <button v-on:click="getquestions" class="button button-rounded" v-bind:disabled="buttondis"><i class="fa fa-download"></i>下载题库</button>
                     </h2>
                 </div>
                 <div v-else-if="mode == 'answer'" class="re-box">
@@ -32,9 +32,14 @@
                         {{testname}}
                     </h2>
                 </div>
+                <div v-else-if="mode == 'debug'" class="re-box">
+                    <h2>
+                        没有找到对应的题库&nbsp;<button v-on:click="fixvariable" class="button button-rounded"><i class="fa fa-angle-double-down"></i>再查找一次</button>
+                    </h2>
+                </div>
                 <div v-else class="re-box">
-                    <h2>浏览器或许不被支持
-                        <button v-on:click="fixvariable" class="button button-rounded"><i class="fa fa-angle-double-down"></i>&nbsp;输入代码</button>
+                    <h2>浏览器或许不被支持&nbsp;
+                        <button v-on:click="fixvariable" class="button button-rounded"><i class="fa fa-angle-double-down"></i>输入代码</button>
                     </h2>
                 </div>
                 <div class="re-mainright">
@@ -54,5 +59,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
 <script src="../lib/caper.js"></script>
 <script src="../js/mcode.js"></script>
+<script src="../js/test.js"></script>
 
 </html>

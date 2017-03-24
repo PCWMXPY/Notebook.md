@@ -14,18 +14,29 @@ jQuery(document).ready(function () {
 let title = new Vue({
     el: '#title',
     data: {
+        buttondis: false,
         mode: '',
         testname: '',
-        tname: '',
-        questions: []
+        tname: ''
     },
     computed: {},
     methods: {
         getquestions: function () {
-            this.mode = 'answer';
-            this.testname = 'THTRE 110 Final';
+            this.buttondis = true;
+            featurefunctions.getquestionbymcode(this.tname, function (data) {
+                // console.log(typeof data);
+                if (data.length > 5) {
+                    data = JSON.parse(data);
+                    app.tests = data.questions;
+                    title.mode = 'answer';
+                    title.testname = data.examname;
+                } else {
+                    title.mode = 'debug';
+                }
+            });
         },
         fixvariable: function () {
+            this.buttondis = false;
             this.mode = 'mcode';
         }
     }
@@ -36,34 +47,8 @@ let app = new Vue({
         tests: []
     },
     methods: {
-        add: function (question, correct, a, b, c, d, e) {
-            var showc = 'hidden';
-            var showd = 'hidden';
-            var showe = 'hidden';
-            if (c.length > 0) {
-                showc = 'hiddens';
-            }
-            if (d.length > 0) {
-                showd = 'hiddens';
-            }
-            if (e.length > 0) {
-                showe = 'hiddens';
-            }
-            var thatquestion = {
-                question: question,
-                a: a,
-                b: b,
-                c: c,
-                showc: showc,
-                d: d,
-                showd: showd,
-                e: e,
-                showe: showe,
-                sol: [false, false, false, false, false],
-                correct: correct - 1,
-                correctorwrong: '-'
-            }
-            this.tests.push(thatquestion);
+        convert: function (exam) {
+
         },
         grade: function () {
 
@@ -77,7 +62,3 @@ let app = new Vue({
 function getURLVar(name) {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 }
-app.add('1.9 Related to Theater as Seeing Place, Elizabethan theatre performers thought of the stage as a:', 1,
-    'Mirror ', 'Pedestal ', 'A time machine ', 'a place of wealth', '');
-app.add('1.10 My instructor for this course is', 3, 'Jim Trenberth ', 'Stephen Leath',
-    'Kelly Marie Schaefer ', 'I have no idea', '');

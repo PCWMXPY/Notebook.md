@@ -45,6 +45,10 @@ input.re-input {
     background-color: #9ea3c6;
 }
 
+.re-button-sm {
+    padding-top: 3px;
+}
+
 
 /*.re-button:hover {
     background-color: #ffac00;
