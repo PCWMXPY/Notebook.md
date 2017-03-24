@@ -45,6 +45,10 @@ input.re-input {
     background-color: #9ea3c6;
 }
 
+.re-lastbutton {
+    margin-bottom: 10px;
+}
+
 .re-button-sm {
     padding-top: 3px;
 }
@@ -70,6 +74,10 @@ input.re-input {
     margin-top: 10%;
 }
 
+.re-small {
+    margin: -5px;
+}
+
 .re-title-sm {
     /*filter: blur(1px);*/
     margin-top: 5%;
@@ -77,6 +85,14 @@ input.re-input {
 
 .re-questions {
     color: #ffdac0;
+}
+
+.re-qu {
+    color: #b3b3b3;
+}
+
+.re-aw {
+    color: black;
 }
 
 .re-title-xs {

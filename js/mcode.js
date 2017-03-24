@@ -47,14 +47,24 @@ let app = new Vue({
         tests: []
     },
     methods: {
-        convert: function (exam) {
-
+        convert: function (index) {
+            return otherfunctions.converttochinese(index + 1);
+        },
+        downvert: function (index) {
+            return otherfunctions.converttoletter(index + 1);
         },
         grade: function () {
 
         },
         gradethis: function (i) {
 
+        },
+        test: function () {
+            testfunctions.addtestquestiontojavascript(function (data) {
+                app.tests = data.questions;
+                title.mode = 'answer';
+                title.testname = data.examname;
+            });
         }
     }
 })
