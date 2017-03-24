@@ -13,6 +13,7 @@ let main = new Vue({
     data: {
         languages: 'chinese',
         welcome: '试题复习网站'
+        //url: https://raw.githubusercontent.com/PCWMXPY/slogan/master/Review
     },
     methods: {
         donate: function () {
