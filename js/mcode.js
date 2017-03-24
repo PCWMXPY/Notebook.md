@@ -62,3 +62,13 @@ let app = new Vue({
 function getURLVar(name) {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 }
+
+function URLencode(sStr) {
+
+    return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
+
+}
+
+// const teststring = JSON.stringify(testobject);
+// console.log(teststring);
+// console.log(URLencode(teststring));
