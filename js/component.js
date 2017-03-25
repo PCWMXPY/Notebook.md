@@ -5,6 +5,6 @@
  * @author WMXPY
  * @contect wm@wmpcxpy.com
  */
-Vue.component('greeting', {
-    template: '<h1>Welcome to coligo!</h1>'
+Vue.component('re-credit', {
+    template: '<div><p style="color:#565656">Review.md by WMXPY@<a href="http://mengw.io">mengw.io</a></p></div>'
 });
