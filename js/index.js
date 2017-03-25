@@ -16,9 +16,9 @@ let main = new Vue({
         //url: https://raw.githubusercontent.com/PCWMXPY/slogan/master/Review
     },
     methods: {
-        donate: function () {
-            window.location.href = './donate/';
-        },
+        // donate: function () {
+        //     window.location.href = './donate/';
+        // },
         language: function () {
             console.log('test');
         },

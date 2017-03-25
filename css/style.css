@@ -45,8 +45,14 @@ input.re-input {
     background-color: #9ea3c6;
 }
 
+.re-button-iv {
+    background-color: #9ea3c6;
+    text-align: left;
+}
+
 .re-lastbutton {
     margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .re-button-sm {

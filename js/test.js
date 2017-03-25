@@ -23,6 +23,14 @@ const testfunctions = {
             }
         ]
     },
+    githubfile: function () {
+        Ca$.get({
+            url: 'https://raw.githubusercontent.com/Justice-Rains-From-Above/slogan/master/review.title',
+            success: function (data) {
+                console.log(data);
+            }
+        })
+    },
     addtestquestiontophp: function () {
         featurefunctions.uploadtoserver('testexam2', 'testexam', [{
                 question: 'what is the answer of 1+1',
@@ -60,14 +68,17 @@ const featurefunctions = {
         re.examname = examname;
         re.mcode = mcode;
         re.questions = questions;
+        re.visits = 0;
         re = JSON.stringify(re);
+        re = URLencode(re);
+        console.log(re);
         Ca$.post({
             url: '../php/updatequestion.php',
             data: {
                 json: re
             },
             success: function (data) {
-                document.getElementById('debug').innerHTML = data;
+                console.log(data);
             }
         })
     },
