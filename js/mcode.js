@@ -47,14 +47,27 @@ let title = new Vue({
 let app = new Vue({
     el: '#main',
     data: {
-        tests: []
+        tests: [],
+        lengths: 0
     },
+    watch: {},
     methods: {
         convert: function (index) {
             return otherfunctions.converttochinese(index + 1);
         },
         downvert: function (index) {
             return otherfunctions.converttoletter(index + 1);
+        },
+        clicked: function () {
+            let count = 0;
+            for (id in this.tests) {
+                if (this.tests[id].picked != -1) count++;
+            }
+            this.lengths = count;
+        },
+        clicktext: function (index, cindex) {
+            this.tests[index].picked = cindex;
+            this.clicked();
         },
         grade: function () {
 

@@ -6,7 +6,5 @@
  * @contect wm@wmpcxpy.com
  */
 jQuery(document).ready(function () {
-    if (getURLVar('code') != null) title.tname = getURLVar('code');
-    if (getURLVar('mode') != null) title.mode = getURLVar('mode');
-    $.backstretch("../imgs/indexbg.jpg");
+    $.backstretch("../../imgs/indexbg.jpg");
 });
