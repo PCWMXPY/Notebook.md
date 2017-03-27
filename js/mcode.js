@@ -67,6 +67,9 @@ let app = new Vue({
         },
         test: function () {
             testfunctions.addtestquestiontojavascript(function (data) {
+                for (let i = 0; i < data.questions.length; i++) {
+                    data.questions[i].picked = -1;
+                }
                 app.tests = data.questions;
                 title.mode = 'answer';
                 title.testname = data.examname;
