@@ -76,7 +76,14 @@ let app = new Vue({
         },
         grade: function () {
             for (id in this.tests) {
-                this.tests[id].coloreffect = 'auto-wrong';
+                if (this.tests[id].picked == this.tests[id].correct) {
+                    this.tests[id].coloreffect = 'auto-correct';
+                    this.tests[id].answer[this.tests[id].picked][1] = 'auto-correct';
+                } else {
+                    this.tests[id].coloreffect = 'auto-wrong';
+                    this.tests[id].answer[this.tests[id].picked][1] = 'auto-wrong';
+                    this.tests[id].answer[this.tests[id].correct][1] = 'auto-correct';
+                }
             }
             console.log(this.tests);
         },
@@ -90,7 +97,10 @@ let app = new Vue({
             testfunctions.addtestquestiontojavascript(function (data) {
                 for (let i = 0; i < data.questions.length; i++) {
                     data.questions[i].picked = -1;
-                    data.questions[i].coloreffect = 'auto-test';
+                    data.questions[i].coloreffect = 're-qu';
+                    for (c in data.questions[i].answer) {
+                        data.questions[i].answer[c] = [data.questions[i].answer[c], ''];
+                    }
                 }
                 app.tests = data.questions;
                 title.mode = 'answer';
