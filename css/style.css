@@ -6,6 +6,14 @@
     background-color: #fdfdfd;
 }
 
+.auto-wrong {
+    color: #ff0f0f;
+}
+
+.auto-test {
+    color: green;
+}
+
 .re-center {
     text-align: center;
 }

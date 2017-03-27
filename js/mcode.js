@@ -50,6 +50,11 @@ let app = new Vue({
         tests: [],
         lengths: 0
     },
+    computed: {
+        questioncolor: function (index, cindex) {
+            return index;
+        }
+    },
     watch: {},
     methods: {
         convert: function (index) {
@@ -70,7 +75,10 @@ let app = new Vue({
             this.clicked();
         },
         grade: function () {
-
+            for (id in this.tests) {
+                this.tests[id].coloreffect = 'auto-wrong';
+            }
+            console.log(this.tests);
         },
         gradethis: function (i) {
 
@@ -82,6 +90,7 @@ let app = new Vue({
             testfunctions.addtestquestiontojavascript(function (data) {
                 for (let i = 0; i < data.questions.length; i++) {
                     data.questions[i].picked = -1;
+                    data.questions[i].coloreffect = 'auto-test';
                 }
                 app.tests = data.questions;
                 title.mode = 'answer';
