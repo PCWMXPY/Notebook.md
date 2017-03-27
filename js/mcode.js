@@ -29,6 +29,10 @@ let title = new Vue({
                     data = JSON.parse(data);
                     for (let i = 0; i < data.questions.length; i++) {
                         data.questions[i].picked = -1;
+                        data.questions[i].coloreffect = 're-qu';
+                        for (c in data.questions[i].answer) {
+                            data.questions[i].answer[c] = [data.questions[i].answer[c], ''];
+                        }
                     }
                     app.tests = data.questions;
                     title.mode = 'answer';
@@ -48,6 +52,7 @@ let app = new Vue({
     el: '#main',
     data: {
         tests: [],
+        storage: [],
         lengths: 0
     },
     computed: {
@@ -85,7 +90,7 @@ let app = new Vue({
                     this.tests[id].answer[this.tests[id].correct][1] = 'auto-correct';
                 }
             }
-            console.log(this.tests);
+            this.clicked();
         },
         gradethis: function (i) {
 

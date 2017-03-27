@@ -50,25 +50,37 @@
         </div>
         <div class="row" id="main">
             <div class="col-md-10 col-md-offset-1 re-bot bg-color-bot re-questions">
+                <div v-if="storage.length>-1" class="div_right_bottom">
+                    <span class="button-dropdown" data-buttons="dropdown">
+                    <a class="button button-square">
+                    <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="button-dropdown-list button-square is-below">
+                    <li>
+                    <a><i class="fa fa-server"></i></a>
+                    </li>
+                    <li>
+                    <a>Q</a>
+                    </li>
+                    </ul>
+                    </span>
+                </div>
                 <div v-if="tests.length==0">
                     <br>
                     <a href="./ob"><i class="fa fa-question-circle"></i>&nbsp;并不知道题库代码?</a><br>
                     <a href="../donate"><i class="fa fa-heart"></i>&nbsp;我也想在 Review.md 上发布题目!</a>
                 </div>
                 <div v-if="tests.length>0">
-                    <div>
-                        {{lengths}}
-                    </div>
+                    <div>{{lengths}}</div>
                     <div v-for="(question,index) in tests">
                         <p>第{{convert(index)}}题: <strong v-bind:class="question.coloreffect">{{question.question}}</strong></p>
                         <p class="re-small" v-for="(choices,cindex) in question.answer">
                             <input type="radio" v-on:click="clicked" class="re-radio" v-bind:value="cindex" v-model="question.picked">&nbsp;
-                            <span v-bind:class="choices[1]" v-on:click="clicktext(index,cindex)"><label class="re-label">{{downvert(cindex)}}</label>&nbsp;{{choices[0]}}</span>
-                        </p>
+                            <span v-bind:class="choices[1]" v-on:click="clicktext(index,cindex)">
+                                <label class="re-label">{{downvert(cindex)}}</label>&nbsp;{{choices[0]}}</span></p>
                         <strong>{{question.picked}}</strong>
                         <hr>
-                    </div>
-                    <button type="button" class="re-button button button-block button-rounded" v-on:click="grade">计算得分</button>
+                    </div><button type="button" class="re-button button button-block button-rounded" v-on:click="grade">计算得分</button>'
                     <re-credit v-on:click="testss"></re-credit>
                 </div>
             </div>
@@ -78,11 +90,14 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/js/buttons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.3.0/vue-router.js"></script>-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>-->
 <script src="../lib/caper.js"></script>
 <script src="../js/component.js"></script>
 <script src="../js/mcode.js"></script>
+<!--<script src="../js/router.js"></script>-->
 <script src="../js/test.js"></script>
 
 </html>
