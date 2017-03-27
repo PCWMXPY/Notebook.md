@@ -106,6 +106,9 @@ let app = new Vue({
                 title.mode = 'answer';
                 title.testname = data.examname;
             });
+        },
+        testss: function () {
+            console.log('tt');
         }
     }
 })

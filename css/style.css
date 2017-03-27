@@ -162,3 +162,14 @@ hr {
     -ms-filter: blur(15px);
     filter: blur(15px);
 }
+
+.div_right_bottom {
+    float: right;
+    position: fixed;
+    right: 1%;
+    top: 1%;
+    _position: absolute;
+    /* position fixed for IE6 */
+}
+
+</style>
