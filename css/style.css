@@ -24,7 +24,7 @@ input.re-input {
     overflow: hidden;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    background-color: #9ea3c6;
+    background-color: #fdfdfd;
 }
 
 .re-right {
@@ -42,7 +42,7 @@ input.re-input {
 .re-button {
     width: 100%;
     margin-top: 5px;
-    background-color: #9ea3c6;
+    background-color: #e6c18a;
 }
 
 .re-button-iv {
@@ -59,6 +59,10 @@ input.re-input {
     padding-top: 3px;
 }
 
+.re-label {
+    color: #4f4f4f;
+}
+
 
 /*.re-button:hover {
     background-color: #ffac00;
@@ -72,7 +76,7 @@ input.re-input {
 .re-bot {
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    background-color: #3d3d3d;
+    background-color: #e1e1e1;
 }
 
 .re-title {

@@ -52,9 +52,12 @@
                 <div v-if="tests.length>0">
                     <div v-for="(question,index) in tests">
                         <p>第{{convert(index)}}题: <strong class="re-qu">{{question.question}}</strong></p>
-                        <p class="re-small" v-for="(choices,index) in question.answer">
-                            {{downvert(index)}}.&nbsp;{{choices}}
+                        <p class="re-small" v-for="(choices,cindex) in question.answer">
+                            <input type="radio" class="re-radio" v-bind:value="cindex" v-model="question.picked">&nbsp;
+                            <label
+                                class="re-label">{{downvert(cindex)}}</label>&nbsp;{{choices}}
                         </p>
+                        {{question.picked}}
                         <hr>
                     </div>
                     <button type="button" class="re-button button button-block button-rounded" v-on:click="grade">计算得分</button>

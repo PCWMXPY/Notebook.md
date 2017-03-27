@@ -27,6 +27,9 @@ let title = new Vue({
                 // console.log(typeof data);
                 if (data.length > 5) {
                     data = JSON.parse(data);
+                    for (let i = 0; i < data.questions.length; i++) {
+                        data.questions[i].picked = -1;
+                    }
                     app.tests = data.questions;
                     title.mode = 'answer';
                     title.testname = data.examname;
