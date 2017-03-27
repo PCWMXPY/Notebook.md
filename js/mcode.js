@@ -62,6 +62,9 @@ let app = new Vue({
         gradethis: function (i) {
 
         },
+        clickansweritself: function (index, answer) {
+            this.tests[index].picked = answer;
+        },
         test: function () {
             testfunctions.addtestquestiontojavascript(function (data) {
                 app.tests = data.questions;

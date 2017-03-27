@@ -49,13 +49,13 @@
         </div>
         <div class="row" id="main">
             <div class="col-md-10 col-md-offset-1 re-bot re-questions">
+                <hr>
                 <div v-if="tests.length>0">
                     <div v-for="(question,index) in tests">
                         <p>第{{convert(index)}}题: <strong class="re-qu">{{question.question}}</strong></p>
                         <p class="re-small" v-for="(choices,cindex) in question.answer">
                             <input type="radio" class="re-radio" v-bind:value="cindex" v-model="question.picked">&nbsp;
-                            <label
-                                class="re-label">{{downvert(cindex)}}</label>&nbsp;{{choices}}
+                            <label class="re-label">{{downvert(cindex)}}</label>&nbsp;{{choices}}
                         </p>
                         {{question.picked}}
                         <hr>
