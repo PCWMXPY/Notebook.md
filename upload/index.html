@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Review.md</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../imgs/icon.png">
+    <link href="../lib/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/css/buttons.css" />
+    <link rel="stylesheet" href="../lib/css/font-awesome.min.css">
+    <!--<link rel="stylesheet/less" type="text/css" href="../css/newtech.less">-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <input id="input" type='file' style="visibility: hidden" />
+    <div class="container-fluid">
+        <div class="row re-title-sm">
+            <div class="col-md-10 col-md-offset-1">
+                <a style="color:aquamarine;" href="../"><i class="fa fa-arrow-left"></i>&nbsp;返回</a>
+            </div>
+        </div>
+        <div class="row" id="title">
+            <div class="col-md-10 col-md-offset-1 re-top bg-color-top re-h2">
+                <div v-if="mode == 'mcode'" class="re-box">
+                    <h2>文件:&nbsp; &nbsp;
+                        <button v-on:click="getquestions" class="button button-rounded" v-bind:disabled="buttondis"><i class="fa fa-download"></i>&nbsp;下载题库</button>
+                    </h2>
+                </div>
+                <div v-else-if="mode == 'answer'" class="re-box">
+                    <h2>
+                        {{testname}}
+                    </h2>
+                </div>
+                <div class="re-mainright">
+                    <i class="fa fa-cube"></i>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 re-bot bg-color-bot re-questions">
+                    <div v-if="tests.length==0">
+                        <br>
+                        <a href="./ob"><i class="fa fa-question-circle"></i>&nbsp;并不知道题库代码?</a><br>
+                        <a href="../donate"><i class="fa fa-heart"></i>&nbsp;我也想在 Review.md 上发布题目!</a>
+                    </div>
+                    <div v-if="tests.length>0">
+                        <div>{{lengths}}</div>
+                        <div v-for="(question,index) in tests">
+                            <p>第{{convert(index)}}题: <strong v-bind:class="question.coloreffect">{{question.question}}</strong></p>
+                            <p class="re-small" v-for="(choices,cindex) in question.answer">
+                                <input type="radio" v-on:click="clicked" class="re-radio" v-bind:value="cindex" v-model="question.picked">&nbsp;
+                                <span v-bind:class="choices[1]" v-on:click="clicktext(index,cindex)">
+                                <label class="re-label">{{downvert(cindex)}}</label>&nbsp;{{choices[0]}}</span></p>
+                            <strong>{{question.picked}}</strong>
+                            <hr>
+                        </div><button type="button" class="re-button button button-block button-rounded" v-on:click="grade">计算得分</button>'
+                        <re-credit v-on:click="testss"></re-credit>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div_right_bottom">
+        <span class="button-dropdown" data-buttons="dropdown">
+                    <button class="button button-rounded button-square">
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul class="button-dropdown-list">
+                        <li><button class="button button-square"><i class="fa fa-cog"></i></button></li>
+                        <li><button class="button button-square"><i class="fa fa-github"></i></button></li>
+                    </ul>
+                </span>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/js/buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.3.0/vue-router.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>-->
+<script src="../lib/caper.js"></script>
+<script src="../js/component.js"></script>
+<script src="../js/upload.js"></script>
+<script src="../FileReader/readfile.js"></script>
+<!--<script src="../js/router.js"></script>-->
+<script src="../js/test.js"></script>
+
+</html>
