@@ -5,8 +5,8 @@
             mode: 'Text',
             file: this.files[0]
         }, function (filedata) {
-            console.log(scanner.make('THTRE 110 FINAL', 't110final', filedata));
             title.add(scanner.make('THTRE 110 FINAL', 't110final', filedata));
+            // featurefunctions.uploadtoserver(scanner.make('THTRE 110 FINAL', 't110final', filedata));
         });
     };
     gotoTop();
@@ -140,34 +140,6 @@ function URLencode(sStr) {
     return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
 
 }
-
-function gotoTop(min_height) {
-    $("#gotoTop").click( //定义返回顶部点击向上滚动的动画
-        function () {
-            $('html,body').animate({
-                scrollTop: 0
-            }, 700);
-        }).hover( //为返回顶部增加鼠标进入的反馈效果，用添加删除css类实现
-        function () {
-            $(this).addClass("hover");
-        },
-        function () {
-            $(this).removeClass("hover");
-        });
-    //获取页面的最小高度，无传入值则默认为600像素
-    min_height ? min_height = min_height : min_height = 600;
-    //为窗口的scroll事件绑定处理函数
-    $(window).scroll(function () {
-        //获取窗口的滚动条的垂直位置
-        var s = $(window).scrollTop();
-        //当窗口的滚动条的垂直位置大于页面的最小高度时，让返回顶部元素渐现，否则渐隐
-        if (s > min_height) {
-            $("#gotoTop").fadeIn(100);
-        } else {
-            $("#gotoTop").fadeOut(200);
-        };
-    });
-};
 // const teststring = JSON.stringify(testobject);
 // console.log(teststring);
 // console.log(URLencode(teststring));

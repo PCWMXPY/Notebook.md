@@ -12,7 +12,7 @@ let main = new Vue({
     el: '#main',
     data: {
         languages: 'chinese',
-        welcome: '试题复习网站'
+        welcome: '一个试题复习网站'
         //url: https://raw.githubusercontent.com/PCWMXPY/slogan/master/Review
     },
     methods: {
@@ -23,7 +23,7 @@ let main = new Vue({
             console.log('test');
         },
         reimport: function () {
-            window.location.href = './rev/?mode=import';
+            window.location.href = './upload/';
         },
         recreate: function () {
             window.location.href = './create/?mode=create';

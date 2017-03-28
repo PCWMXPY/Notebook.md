@@ -6,23 +6,6 @@
  * @contect wm@wmpcxpy.com
  */
 const testfunctions = {
-    testobject: {
-        examname: 'testexam2',
-        mcode: 'testexam',
-        questions: [{
-                question: 'what is the answer of 1+1',
-                description: 'test description',
-                answer: ['2', 'QBA', 'THIRD', 888, 'fivth'],
-                correct: 0
-            },
-            {
-                question: 'what is the answer of 1+1 for sure',
-                description: 'test description',
-                answer: ['2', 'QBA', 'THIRD', 888, 'fivth'],
-                correct: 3
-            }
-        ]
-    },
     githubfile: function () {
         Ca$.get({
             url: 'https://raw.githubusercontent.com/Justice-Rains-From-Above/slogan/master/review.title',
@@ -30,52 +13,15 @@ const testfunctions = {
                 console.log(data);
             }
         })
-    },
-    addtestquestiontophp: function () {
-        featurefunctions.uploadtoserver('testexam2', 'testexam', [{
-                question: 'what is the answer of 1+1',
-                description: 'test description',
-                answer: ['2', 'QBA', 'THIRD', 888, 'fivth'],
-                correct: 0
-            },
-            {
-                question: 'what is the answer of 1+1 for sure',
-                description: 'test description',
-                answer: ['2', 'QBA', 'THIRD', 888, 'fivth'],
-                correct: 3
-            }
-        ])
-    },
-    addtestquestiontojavascript: function (success) {
-        success(featurefunctions.uploadfortest('testexam2', 'testexam', [{
-                question: 'what is the answer of 1+1',
-                description: 'test description',
-                answer: ['2', 'QBA', 'THIRD', 888, 'fivth'],
-                correct: 0
-            },
-            {
-                question: 'what is the answer of 1+1 for sure',
-                description: 'test description',
-                answer: ['2', 'QBA', 'THIRD', 888, 'fivth'],
-                correct: 3
-            }
-        ]));
     }
 }
 const featurefunctions = {
-    uploadtoserver: function (examname, mcode, questions) {
-        let re = new Object;
-        re.examname = examname;
-        re.mcode = mcode;
-        re.questions = questions;
-        re.visits = 0;
-        re = JSON.stringify(re);
-        re = URLencode(re);
-        console.log(re);
+    uploadtoserver: function (json) {
+        json = JSON.stringify(json);
         Ca$.post({
             url: '../php/updatequestion.php',
             data: {
-                json: re
+                json: json
             },
             success: function (data) {
                 console.log(data);
@@ -159,3 +105,21 @@ const otherfunctions = {
         }
     }
 }
+
+function gotoTop(min_height) {
+    $("#gotoTop").click(
+        function () {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        })
+    min_height ? min_height = min_height : min_height = 600;
+    $(window).scroll(function () {
+        var s = $(window).scrollTop();
+        if (s > min_height) {
+            $("#gotoTop").fadeIn();
+        } else {
+            $("#gotoTop").fadeOut();
+        };
+    });
+};

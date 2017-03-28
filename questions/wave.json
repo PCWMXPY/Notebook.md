@@ -12,5 +12,22 @@
         "answer": ["2", "QBA", "THIRD", 888, "fivth"],
         "correct": 3
     }],
-    "visits": 75
+    "visits": 76
+}, {
+    "examname": "THTRE 110 FINAL",
+    "mcode": "t110final",
+    "questions": [{
+        "question": "Staging - Actor Coaching - Pacing - Coordinating - Presenting. These are components of what phase of directing? \r",
+        "questionnum": "12.1",
+        "answer": ["Preparatory\u202f \r", "Psychological\u202f \r", "Implementation\u202f \r", "Presentational \r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "Positioning the actors on the set and moving them about in a theatrically effective manner. This is the definition of? \r",
+        "questionnum": "12.2",
+        "answer": ["Concept\u202f \r", "Collaboration\u202f \r", "Staging\u202f \r", "Prepartory \r"],
+        "description": "",
+        "correct": 2
+    }],
+    "visits": 1
 }]
