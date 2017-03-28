@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!--<input type='file' multiple />-->
+    <input id="input" type='file' />
+    <div id="display">sss</div>
+    <script>
+        function clickthis() {
+            document.getElementById('input').click();
+        }
+        document.getElementById('input').onchange = function () {
+            Cf$.read({
+                mode: 'Text',
+                file: this.files[0]
+            }, function (filedata) {
+                console.log(filedata);
+                const inn = filedata.split('\n');
+                document.getElementById('display').innerHTML = inn[0];
+            });
+        };
+    </script>
+</body>
+<script src="../lib/caper.js"></script>
+
+</html>
