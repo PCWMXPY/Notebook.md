@@ -9,6 +9,7 @@
             title.add(scanner.make('THTRE 110 FINAL', 't110final', filedata));
         });
     };
+    gotoTop();
 }());
 /*
  * @author WMXPY
@@ -62,6 +63,9 @@ let app = new Vue({
         downvert: function (index) {
             return otherfunctions.converttoletter(index + 1);
         },
+        idify: function (index) {
+            return 'index:' + index;
+        },
         clicked: function () {
             let count = 0;
             for (id in this.tests) {
@@ -76,11 +80,11 @@ let app = new Vue({
         grade: function () {
             for (id in this.tests) {
                 if (this.tests[id].correct >= this.tests[id].answer.length || this.tests[id].correct < 0) {
-                    console.log(id);
+                    // console.log(id);
                     if (this.tests[id].correct != 9) {
                         return 'error';
                     } else {
-
+                        document.getElementById('index:' + id).innerHTML = '这道问题没有答案,如果你知道它的答案请发邮件到llf@wmpcxpy.com纠正我们';
                     }
                 } else {
                     if (this.tests[id].picked == this.tests[id].correct) {
@@ -133,6 +137,34 @@ function URLencode(sStr) {
     return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
 
 }
+
+function gotoTop(min_height) {
+    $("#gotoTop").click( //定义返回顶部点击向上滚动的动画
+        function () {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        }).hover( //为返回顶部增加鼠标进入的反馈效果，用添加删除css类实现
+        function () {
+            $(this).addClass("hover");
+        },
+        function () {
+            $(this).removeClass("hover");
+        });
+    //获取页面的最小高度，无传入值则默认为600像素
+    min_height ? min_height = min_height : min_height = 600;
+    //为窗口的scroll事件绑定处理函数
+    $(window).scroll(function () {
+        //获取窗口的滚动条的垂直位置
+        var s = $(window).scrollTop();
+        //当窗口的滚动条的垂直位置大于页面的最小高度时，让返回顶部元素渐现，否则渐隐
+        if (s > min_height) {
+            $("#gotoTop").fadeIn(100);
+        } else {
+            $("#gotoTop").fadeOut(200);
+        };
+    });
+};
 // const teststring = JSON.stringify(testobject);
 // console.log(teststring);
 // console.log(URLencode(teststring));

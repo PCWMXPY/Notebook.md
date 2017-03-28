@@ -25,13 +25,15 @@
             <div class="col-md-10 col-md-offset-1 re-top bg-color-top re-h2">
                 <div v-if="mode == 'mcode'" class="re-box">
                     <h2>文件:&nbsp; &nbsp;
-                        <button v-on:click="getquestions" class="button button-rounded" v-bind:disabled="buttondis"><i class="fa fa-download"></i>&nbsp;下载题库</button>
+                        <button v-on:click="getquestions" class="button button-rounded" v-bind:disabled="buttondis"><i class="fa fa-upload"></i>&nbsp;上传文件</button>
                     </h2>
                 </div>
                 <div v-else-if="mode == 'answer'" class="re-box">
                     <h2>
                         {{testname}}
                     </h2>
+                    当前题库似乎支持更多模式, 点击右上角的悬浮菜单获得更多选项
+                    <!--<hr>-->
                 </div>
                 <div class="re-mainright">
                     <i class="fa fa-cube"></i>
@@ -49,14 +51,15 @@
                     <div v-if="tests.length>0">
                         <div>{{lengths}}</div>
                         <div v-for="(question,index) in tests">
-                            <p>第{{convert(index)}}题: <strong v-bind:class="question.coloreffect">{{question.question}}</strong></p>
+                            <p>第{{convert(index)}}题({{question.questionnum}}): <strong v-bind:class="question.coloreffect">{{question.question}}</strong></p>
+                            <div v-bind:id="idify(index)"></div>
                             <p class="re-small" v-for="(choices,cindex) in question.answer">
                                 <input type="radio" v-on:click="clicked" class="re-radio" v-bind:value="cindex" v-model="question.picked">&nbsp;
                                 <span v-bind:class="choices[1]" v-on:click="clicktext(index,cindex)">
                                 <label class="re-label">{{downvert(cindex)}}</label>&nbsp;{{choices[0]}}</span></p>
                             <strong>{{question.picked}}</strong>
                             <hr>
-                        </div><button type="button" class="re-button button button-block button-rounded" v-on:click="grade">计算得分</button>'
+                        </div><button type="button" class="re-button button button-block button-rounded" v-on:click="grade">计算得分</button>
                         <re-credit v-on:click="testss"></re-credit>
                     </div>
                 </div>
@@ -70,6 +73,7 @@
                     </button>
                     <ul class="button-dropdown-list">
                         <li><button class="button button-square"><i class="fa fa-cog"></i></button></li>
+                        <li><button id="gotoTop" class="button button-square"><i class="fa fa-arrow-up"></i></button></li>
                         <li><button class="button button-square"><i class="fa fa-github"></i></button></li>
                     </ul>
                 </span>
