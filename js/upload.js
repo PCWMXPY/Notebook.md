@@ -61,7 +61,7 @@ let app = new Vue({
     watch: {},
     methods: {
         convert: function (index) {
-            return otherfunctions.converttochinese(index + 1);
+            return Cd$.chineseify(index + 1, 1);
         },
         downvert: function (index) {
             return otherfunctions.converttoletter(index + 1);

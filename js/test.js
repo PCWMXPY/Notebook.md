@@ -60,41 +60,6 @@ const featurefunctions = {
     }
 }
 const otherfunctions = {
-    converttochinese: function (num) {
-        num = parseInt(num);
-        const chinum = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '百', '整', '数据超出限制范围'];
-        if (num == 0) {
-            return chinum[0];
-        }
-        const hundrands = parseInt(num / 100);
-        let result = '';
-        if (hundrands > 0) {
-            if (hundrands < 10) {
-                result += chinum[hundrands] + chinum[11];
-            } else {
-                result = chinum[13];
-                return result;
-            }
-        }
-        const tens = parseInt((num - hundrands * 100) / 10);
-        if (tens > 0) {
-            if (tens == 1) {
-                result += chinum[10];
-            } else {
-                result += chinum[tens] + chinum[10];
-            }
-        }
-        const singles = parseInt((num - hundrands * 100) - tens * 10);
-        if (singles > 0) {
-            if (tens == 0 && hundrands > 0) {
-                result += chinum[0];
-            }
-            result += chinum[singles];
-        } else {
-            result += chinum[12];
-        }
-        return result;
-    },
     converttoletter: function (num) {
         num = parseInt(num) - 1;
         const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
