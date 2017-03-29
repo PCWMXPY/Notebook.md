@@ -11,7 +11,6 @@ jQuery(document).ready(function () {
     if (getURLVar('mode') != null) title.mode = getURLVar('mode');
     $.backstretch("../imgs/indexbg.jpg");
     document.getElementById('languagec').addEventListener('click', function () {
-        console.log('test');
         if (title.languages == 'chinese') {
             title.languages = 'english';
         } else {
@@ -19,8 +18,9 @@ jQuery(document).ready(function () {
         }
         title.updatelanguage();
     });
+    title.updatelanguage();
 });
-const rewave = [{
+let rewave = [{
     icon: 'fa-language',
     id: 'languagec'
 }];
@@ -43,6 +43,7 @@ let title = new Vue({
             } else {
                 this.display = languages.quiztitle.en;
             }
+            app.updatelanguage(this.languages);
         },
         getquestions: function () {
             this.buttondis = true;
@@ -76,7 +77,7 @@ let app = new Vue({
     data: {
         tests: [],
         storage: [],
-        lengths: 0,
+        lengths: '',
         display: {}
     },
     computed: {
@@ -92,9 +93,15 @@ let app = new Vue({
             } else {
                 this.display = languages.quiz.en;
             }
+            this.clicked();
         },
         convert: function (index) {
-            return Cd$.chineseify(index + 1, 1);
+            if (title.languages == 'chinese') {
+                return '第' + Cd$.chineseify(index + 1, 1) + '题';
+            } else {
+                return 'Question: ' + index;
+            }
+
         },
         idify: function (index) {
             return 'index:' + index;
@@ -107,7 +114,11 @@ let app = new Vue({
             for (id in this.tests) {
                 if (this.tests[id].picked != -1) count++;
             }
-            this.lengths = count;
+            if (title.languages == 'chinese') {
+                this.lengths = '已经完成了 ' + count + ' 题,剩余 ' + (this.tests.length - count) + ' 题';
+            } else {
+                this.lengths = count + ' Questions done, ' + (this.tests.length - count) + ' left';
+            }
         },
         clicktext: function (index, cindex) {
             this.tests[index].picked = cindex;
@@ -131,23 +142,6 @@ let app = new Vue({
         },
         clickansweritself: function (index, answer) {
             this.tests[index].picked = answer;
-        },
-        test: function () {
-            testfunctions.addtestquestiontojavascript(function (data) {
-                for (let i = 0; i < data.questions.length; i++) {
-                    data.questions[i].picked = -1;
-                    data.questions[i].coloreffect = 're-qu';
-                    for (c in data.questions[i].answer) {
-                        data.questions[i].answer[c] = [data.questions[i].answer[c], ''];
-                    }
-                }
-                app.tests = data.questions;
-                title.mode = 'answer';
-                title.testname = data.examname;
-            });
-        },
-        testss: function () {
-            console.log('tt');
         }
     }
 })

@@ -7,6 +7,7 @@
         }, function (filedata) {
             title.add(scanner.make('THTRE 110 FINAL', 't110final', filedata));
             // featurefunctions.uploadtoserver(scanner.make('THTRE 110 FINAL', 't110final', filedata));
+            app.clicked();
         });
     };
     gotoTop();
@@ -19,17 +20,40 @@ jQuery(document).ready(function () {
     if (getURLVar('code') != null) title.tname = getURLVar('code');
     if (getURLVar('mode') != null) title.mode = getURLVar('mode');
     $.backstretch("../imgs/indexbg.jpg");
+    document.getElementById('languagec').addEventListener('click', function () {
+        if (title.languages == 'chinese') {
+            title.languages = 'english';
+        } else {
+            title.languages = 'chinese'
+        }
+        title.updatelanguage();
+    });
+    title.updatelanguage();
 });
+let rewave = [{
+    icon: 'fa-language',
+    id: 'languagec'
+}];
 let title = new Vue({
     el: '#title',
     data: {
         buttondis: false,
         mode: 'mcode',
         testname: '',
-        tname: ''
+        tname: '',
+        languages: 'chinese',
+        display: {}
     },
     computed: {},
     methods: {
+        updatelanguage: function () {
+            if (this.languages == 'chinese') {
+                this.display = languages.quiztitle.cn;
+            } else {
+                this.display = languages.quiztitle.en;
+            }
+            app.updatelanguage(this.languages);
+        },
         getquestions: function () {
             document.getElementById('input').click();
         },
@@ -52,13 +76,27 @@ let app = new Vue({
     data: {
         tests: [],
         storage: [],
-        lengths: 0
+        lengths: '',
+        display: {}
     },
     computed: {},
     watch: {},
     methods: {
+        updatelanguage: function (lan) {
+            if (lan == 'chinese') {
+                this.display = languages.quiz.cn;
+            } else {
+                this.display = languages.quiz.en;
+            }
+            this.clicked();
+        },
         convert: function (index) {
-            return Cd$.chineseify(index + 1, 1);
+            if (title.languages == 'chinese') {
+                return '第' + Cd$.chineseify(index + 1, 1) + '题';
+            } else {
+                return 'Question: ' + index;
+            }
+
         },
         downvert: function (index) {
             return otherfunctions.converttoletter(index + 1);
@@ -71,7 +109,11 @@ let app = new Vue({
             for (id in this.tests) {
                 if (this.tests[id].picked != -1) count++;
             }
-            this.lengths = count;
+            if (title.languages == 'chinese') {
+                this.lengths = '已经完成了 ' + count + ' 题,剩余 ' + (this.tests.length - count) + ' 题';
+            } else {
+                this.lengths = count + ' Questions done, ' + (this.tests.length - count) + ' left';
+            }
         },
         clicktext: function (index, cindex) {
             this.tests[index].picked = cindex;

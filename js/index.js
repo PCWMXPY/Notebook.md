@@ -9,6 +9,7 @@ jQuery(document).ready(function () {
     $.backstretch("./imgs/indexbg.jpg");
     main.updatedisplay();
 });
+const rewave = [];
 let main = new Vue({
     el: '#main',
     data: {

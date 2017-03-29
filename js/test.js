@@ -14,8 +14,16 @@ Vue.component('re-wave', {
             buttonsinvue: rewave
         };
     },
-    template: '<div class="div_right_bottom"><span class="button-dropdown" data-buttons="dropdown"><button class="button button-rounded button-square"><i class="fa fa-caret-down"></i></button><ul class="button-dropdown-list"><li><button id="gotoTop" onclick="backtotop()" class="button button-square"><i class="fa fa-arrow-up"></i></button></li><li><button class="button button-square"><i class="fa fa-cog"></i></button></li><li v-for="butt in buttonsinvue"><button class="button button-square" v-bind:id="butt.id"><i class="fa" v-bind:class="butt.icon"></i></button></li><li><button class="button button-square"><i class="fa fa-github"></i></button></li></ul></span></div>'
+    methods: {
+        updatebutton: function () {
+            this.buttonsinvue = rewave;
+        }
+    },
+    template: '<div class="div_right_bottom"><span class="button-dropdown" data-buttons="dropdown"><button class="button button-rounded button-square"><i class="fa fa-caret-down"></i></button><ul class="button-dropdown-list"><li><button id="gotoTop" onclick="backtotop()" class="button button-square"><i class="fa fa-arrow-up"></i></button></li><li><button class="button button-square"><i class="fa fa-cog"></i></button></li><li v-for="butt in buttonsinvue"><button class="button button-square" v-bind:id="butt.id"><i class="fa" v-bind:class="butt.icon"></i></button></li><li><button class="button button-square"><i class="fa fa-github"></i></button></li></ul></span><button v-on:click="updatebutton" id="re-waveupdatebutton" style="display:none;"></button></div>'
 });
+const updatebutton = function () {
+    document.getElementById('re-waveupdatebutton').click();
+}
 const testfunctions = {
     githubfile: function () {
         Ca$.get({
@@ -124,18 +132,40 @@ const languages = {
     },
     quiztitle: {
         cn: {
-
+            id: '题库ID:',
+            down: '下载题库',
+            moremode: '当前题库似乎支持更多模式, 点击右上角的悬浮菜单获得更多选项',
+            cantfind: '没有找到对应的题库',
+            searchonemoretime: '再查找一次',
+            notsupport: '浏览器或许不被支持',
+            input: '输入代码',
+            file: '文件:',
+            upload: '选择文件'
         },
         en: {
-
+            id: 'Quiz ID:',
+            down: 'Download',
+            moremode: 'This Quiz seems support more mode, click the button at right corner for more details',
+            cantfind: 'Quiz not found',
+            searchonemoretime: 'Try again',
+            notsupport: 'Browser maybe not supported',
+            input: 'Input code',
+            file: 'File:',
+            upload: 'Browse File'
         }
     },
     quiz: {
         cn: {
-
+            dontknow: '并不知道题库代码?',
+            publish: '我也想在 Review.md 上发布题目!',
+            calculate: '计算得分',
+            donthave: '没有获得过题库文件?'
         },
         en: {
-
+            dontknow: 'Never got a code?',
+            publish: 'I want to publish my Quiz to Review.md too!',
+            calculate: 'Grade my Quiz',
+            donthave: 'Never got a file?'
         }
     },
     donate: {

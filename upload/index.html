@@ -18,21 +18,21 @@
     <div class="container-fluid">
         <div class="row re-title-sm">
             <div class="col-md-10 col-md-offset-1">
-                <a style="color:aquamarine;" href="../"><i class="fa fa-arrow-left"></i>&nbsp;返回</a>
+                <a style="color:aquamarine;" href="../"><i class="fa fa-arrow-left"></i>&nbsp;Back</a>
             </div>
         </div>
         <div class="row" id="title">
             <div class="col-md-10 col-md-offset-1 re-top bg-color-top re-h2">
                 <div v-if="mode == 'mcode'" class="re-box">
-                    <h2>文件:&nbsp; &nbsp;
-                        <button v-on:click="getquestions" class="button button-rounded" v-bind:disabled="buttondis"><i class="fa fa-upload"></i>&nbsp;上传文件</button>
+                    <h2>{{display.file}}&nbsp; &nbsp;
+                        <button v-on:click="getquestions" class="button button-rounded" v-bind:disabled="buttondis"><i class="fa fa-upload"></i>&nbsp;{{display.upload}}</button>
                     </h2>
                 </div>
                 <div v-else-if="mode == 'answer'" class="re-box">
                     <h2>
                         {{testname}}
                     </h2>
-                    <p>当前题库似乎支持更多模式, 点击右上角的悬浮菜单获得更多选项</p>
+                    <p>{{display.moremode}}</p>
                     <!--<hr>-->
                 </div>
                 <div class="re-mainright">
@@ -45,13 +45,13 @@
                 <div class="col-md-10 col-md-offset-1 re-bot bg-color-bot re-questions">
                     <div v-if="tests.length==0">
                         <br>
-                        <a href="./ob"><i class="fa fa-question-circle"></i>&nbsp;并不知道题库代码?</a><br>
-                        <a href="../donate"><i class="fa fa-heart"></i>&nbsp;我也想在 Review.md 上发布题目!</a>
+                        <a href="./ob"><i class="fa fa-question-circle"></i>&nbsp;{{display.donthave}}</a><br>
+                        <a href="../donate"><i class="fa fa-heart"></i>&nbsp;{{display.publish}}</a>
                     </div>
                     <div v-if="tests.length>0">
                         <div>{{lengths}}</div>
                         <div v-for="(question,index) in tests">
-                            <p>第{{convert(index)}}题({{question.questionnum}}): <strong v-bind:class="question.coloreffect">{{question.question}}</strong></p>
+                            <p>{{convert(index)}}({{question.questionnum}}): <strong v-bind:class="question.coloreffect">{{question.question}}</strong></p>
                             <div v-bind:id="idify(index)"></div>
                             <p class="re-small" v-for="(choices,cindex) in question.answer">
                                 <input type="radio" v-on:click="clicked" class="re-radio" v-bind:value="cindex" v-model="question.picked">&nbsp;
@@ -59,7 +59,7 @@
                                 <label class="re-label">{{downvert(cindex)}}</label>&nbsp;{{choices[0]}}</span></p>
                             <strong>{{question.picked}}</strong>
                             <hr>
-                        </div><button type="button" class="re-button button button-block button-rounded" v-on:click="grade">计算得分</button>
+                        </div><button type="button" class="re-button button button-block button-rounded" v-on:click="grade">{{display.calculate}}</button>
                         <re-credit></re-credit>
                     </div>
                     <re-wave></re-wave>
