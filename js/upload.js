@@ -19,6 +19,7 @@
 jQuery(document).ready(function () {
     if (getURLVar('code') != null) title.tname = getURLVar('code');
     if (getURLVar('mode') != null) title.mode = getURLVar('mode');
+    if (getURLVar('language') != null) title.languages = getURLVar('language');
     $.backstretch("../imgs/indexbg.jpg");
     document.getElementById('languagec').addEventListener('click', function () {
         if (title.languages == 'chinese') {

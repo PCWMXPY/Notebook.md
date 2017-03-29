@@ -8,14 +8,19 @@
 jQuery(document).ready(function () {
     $.backstretch("./imgs/indexbg.jpg");
     main.updatedisplay();
+    main.updatesolgan();
 });
 const rewave = [];
 let main = new Vue({
     el: '#main',
     data: {
         languages: 'chinese',
-        welcome: '一个试题复习网站',
-        display: []
+        welcome: '',
+        display: [],
+        slogans: [
+            [],
+            []
+        ]
     },
     methods: {
         updatedisplay: function () {
@@ -23,6 +28,25 @@ let main = new Vue({
                 this.display = languages.index.cn;
             } else {
                 this.display = languages.index.en;
+            }
+            this.updateagain();
+        },
+        updatesolgan: function () {
+            Ca$.get({
+                url: 'https://raw.githubusercontent.com/WYJBD/SLOGAN/master/Review.slogan',
+                success: function (data) {
+                    main.slogans = featurefunctions.seprateslogan(data);
+                    main.updateagain();
+                }
+            })
+        },
+        updateagain: function () {
+            if (this.languages == 'chinese') {
+                const ran = parseInt(Math.random() * 1000) % this.slogans[1].length;
+                this.welcome = this.slogans[1][ran];
+            } else {
+                const ran = parseInt(Math.random() * 1000) % this.slogans[0].length;
+                this.welcome = this.slogans[0][ran];
             }
         },
         language: function () {
@@ -38,6 +62,9 @@ let main = new Vue({
         },
         recreate: function () {
             window.location.href = './create/?mode=create';
+        },
+        relearn: function () {
+            window.location.href = './doc/makefile';
         },
         remcode: function (events, code) {
             console.log(code);

@@ -25,7 +25,7 @@
                 <div class="col-md-8 col-md-offset-2 re-top bg-color-top">
                     <div class="re-box">
                         <h2>{{display.top}}<strong>{{welcome}}</strong></h2>
-                        <a href="./donate/"> {{display.donate}}</a><br>
+                        <a href="./doc/donate/"> {{display.donate}}</a><br>
                         <button class="button re-button-iv button-small button-rounded" v-on:click="language" v-html="display.language"></button>
 
                     </div>
@@ -39,6 +39,7 @@
                     <div class="re-buttons">
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="reimport">{{display.input}}</button>
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="recreate">{{display.create}}</button>
+                        <button type="button" class="re-button-second button button-block button-rounded" v-on:click="relearn">{{display.learn}}</button>
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="remcode">{{display.mcode}}</button>
                         <hr>
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="remcode(this,'t110final')">THTRE 110 FINAL</button>

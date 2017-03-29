@@ -76,6 +76,29 @@ const featurefunctions = {
                 document.getElementById('debug').innerHTML = data;
             }
         })
+    },
+    seprateslogan: function (string) {
+        let re = [
+            [],
+            []
+        ];
+        let now = 0;
+        const inn = string.split('\n');
+        for (let i = 0; i < inn.length; i++) {
+            switch (inn[i]) {
+                case 'English:':
+                    now = 0;
+                    break;
+                case 'Chinese:':
+                    now = 1;
+                    break;
+                default:
+                    if (inn[i].length > 1) {
+                        re[now].push(inn[i]);
+                    }
+            }
+        }
+        return re;
     }
 }
 const otherfunctions = {
@@ -112,22 +135,24 @@ const languages = {
         cn: {
             welcome: '欢迎',
             topic: 'Review.md',
-            top: 'Review.md 是',
+            top: 'Review.md 是 ',
             donate: '为 Review.md 提供灵感',
             language: 'Discover Review.md in <strong>English</strong>',
             input: '导入题库文件',
             create: '创建题库文件',
-            mcode: '输入神秘代码'
+            mcode: '输入神秘代码',
+            learn: '学习如何建立Reviwe.md的题库'
         },
         en: {
             welcome: 'Welcome',
             topic: 'Review.md',
-            top: 'Review.md is',
+            top: 'Review.md is ',
             donate: 'Share your idea with Review.md',
             language: '用<strong>中文</strong>浏览 Review.md',
-            input: 'Upload exam file',
-            create: 'Create exam file',
-            mcode: 'Enter Mystery Code'
+            input: 'Upload Quiz file',
+            create: 'Create Quiz file',
+            mcode: 'Enter Mystery Code',
+            learn: 'Learn how to build your own Quiz file'
         }
     },
     quiztitle: {
