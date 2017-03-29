@@ -20,11 +20,16 @@ jQuery(document).ready(function () {
         title.updatelanguage();
     });
 });
+const rewave = [{
+    icon: 'fa-language',
+    id: 'languagec'
+}];
 let title = new Vue({
     el: '#title',
     data: {
         buttondis: false,
         mode: '',
+        buttons: [],
         testname: '',
         tname: '',
         languages: 'chinese',
