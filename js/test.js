@@ -9,7 +9,7 @@ Vue.component('re-credit', {
     template: '<div><p style="color:#565656"><i class="fa fa-code"></i> Review.md with <i class="fa fa-heart"></i> by WMXPY@<a href="http://mengw.io">mengw.io</a> 2016</p></div>'
 });
 Vue.component('re-wave', {
-    template: '<div class="div_right_bottom"><span class="button-dropdown" data-buttons="dropdown"><button class="button button-rounded button-square"><i class="fa fa-caret-down"></i></button><ul class="button-dropdown-list"><li><button id="gotoTop" onclick="backtotop()" class="button button-square"><i class="fa fa-arrow-up"></i></button></li><li><button class="button button-square"><i class="fa fa-cog"></i></button></li><li><button class="button button-square"><i class="fa fa-github"></i></button></li></ul></span></div>'
+    template: '<div class="div_right_bottom"><span class="button-dropdown" data-buttons="dropdown"><button class="button button-rounded button-square"><i class="fa fa-caret-down"></i></button><ul class="button-dropdown-list"><li><button id="gotoTop" onclick="backtotop()" class="button button-square"><i class="fa fa-arrow-up"></i></button></li><li><button class="button button-square"><i class="fa fa-cog"></i></button></li><li><button class="button button-square" id="languagec"><i class="fa fa-language"></i></button></li><li><button class="button button-square"><i class="fa fa-github"></i></button></li></ul></span></div>'
 });
 const testfunctions = {
     githubfile: function () {
@@ -94,3 +94,51 @@ function gotoTop(min_height) {
         };
     });
 };
+const languages = {
+    index: {
+        cn: {
+            welcome: '欢迎',
+            topic: 'Review.md',
+            top: 'Review.md 是',
+            donate: '为 Review.md 提供灵感',
+            language: 'Discover Review.md in <strong>English</strong>',
+            input: '导入题库文件',
+            create: '创建题库文件',
+            mcode: '输入神秘代码'
+        },
+        en: {
+            welcome: 'Welcome',
+            topic: 'Review.md',
+            top: 'Review.md is',
+            donate: 'Share your idea with Review.md',
+            language: '用<strong>中文</strong>浏览 Review.md',
+            input: 'Upload exam file',
+            create: 'Create exam file',
+            mcode: 'Enter Mystery Code'
+        }
+    },
+    quiztitle: {
+        cn: {
+
+        },
+        en: {
+
+        }
+    },
+    quiz: {
+        cn: {
+
+        },
+        en: {
+
+        }
+    },
+    donate: {
+        cn: {
+
+        },
+        en: {
+
+        }
+    }
+}

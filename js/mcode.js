@@ -10,6 +10,15 @@ jQuery(document).ready(function () {
     if (getURLVar('code') != null) title.tname = getURLVar('code');
     if (getURLVar('mode') != null) title.mode = getURLVar('mode');
     $.backstretch("../imgs/indexbg.jpg");
+    document.getElementById('languagec').addEventListener('click', function () {
+        console.log('test');
+        if (title.languages == 'chinese') {
+            title.languages = 'english';
+        } else {
+            title.languages = 'chinese'
+        }
+        title.updatelanguage();
+    });
 });
 let title = new Vue({
     el: '#title',
@@ -17,10 +26,19 @@ let title = new Vue({
         buttondis: false,
         mode: '',
         testname: '',
-        tname: ''
+        tname: '',
+        languages: 'chinese',
+        display: {}
     },
     computed: {},
     methods: {
+        updatelanguage: function () {
+            if (this.languages == 'chinese') {
+                this.display = languages.quiztitle.cn;
+            } else {
+                this.display = languages.quiztitle.en;
+            }
+        },
         getquestions: function () {
             this.buttondis = true;
             featurefunctions.getquestionbymcode(this.tname, function (data) {
@@ -53,7 +71,8 @@ let app = new Vue({
     data: {
         tests: [],
         storage: [],
-        lengths: 0
+        lengths: 0,
+        display: {}
     },
     computed: {
         questioncolor: function (index, cindex) {
@@ -62,6 +81,13 @@ let app = new Vue({
     },
     watch: {},
     methods: {
+        updatelanguage: function (lan) {
+            if (lan == 'chinese') {
+                this.display = languages.quiz.cn;
+            } else {
+                this.display = languages.quiz.en;
+            }
+        },
         convert: function (index) {
             return Cd$.chineseify(index + 1, 1);
         },
