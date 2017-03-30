@@ -57,6 +57,9 @@ let main = new Vue({
             }
             this.updatedisplay();
         },
+        donate: function () {
+            window.location.href = './doc/donate/?language=' + this.languages;
+        },
         reimport: function () {
             window.location.href = './upload/?language=' + this.languages;
         },
@@ -73,7 +76,6 @@ let main = new Vue({
             } else {
                 window.location.href = './rev/?mode=mcode&language=' + this.languages + '&code=' + code;
             }
-
         }
     }
 })

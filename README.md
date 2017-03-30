@@ -6,6 +6,8 @@
 
 -   Version 1.0.1
     -   What a good start
+-   Version 1.0.2
+    -   Update language and icon for donate page
 
 ### Notice
 

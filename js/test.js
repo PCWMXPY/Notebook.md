@@ -130,6 +130,16 @@ function gotoTop(min_height) {
         };
     });
 };
+
+function getURLVar(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+}
+
+function URLencode(sStr) {
+
+    return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
+
+}
 const languages = {
     index: {
         cn: {
@@ -194,6 +204,32 @@ const languages = {
         }
     },
     donate: {
+        cn: {
+            creative: '这个教程将会指引你与 Review.md 分享创意',
+            index: '在网站的首页,你可以看到一个妙趣横生的标语.而它是由 Review.md 用户自行创作的.',
+            link: '点击这个链接,创建一个你自己的 Github 账号.',
+            address: '访问位于 Github 的 Review.md 的创意贡献地址, 点击右侧的 fork.',
+            location: 'Review.md 在 Github 的地址',
+            jump: '在跳转的界面里,点击文件 Review.title 点击文本查看器右上角的编辑.',
+            edit: '完成对文件的编辑之后保存, 点击发送 Pull Request, 仅两三分钟即可完成.',
+            email: '我们强烈建议你尝试并使用 Github, 但你也可以发送邮件到',
+            product: '提交你的作品.',
+            same: '同样的, 你也可以发送邮件到上述邮箱请求公开你创建的题库.'
+        },
+        en: {
+            creative: 'This doc will guild you share idea with Review.md',
+            index: 'Our user created interesting tag by themself.',
+            link: 'Click this link to register your own Github account.',
+            address: 'Click this link, and click fork at top right corner.',
+            location: 'Review.md in Github',
+            jump: 'Wait until fork done, click edit for Review.slogen.',
+            edit: 'Commit this file, and click pull request, that will only take two or three minutes.',
+            email: 'We highly recommand you use Github, but you can still send email to',
+            product: 'for share your idea.',
+            same: 'Of course, you can send email there to request your own Quiz Mystery Code'
+        }
+    },
+    learn: {
         cn: {
 
         },
