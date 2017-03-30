@@ -2,6 +2,11 @@
 
 -   Recreated to remove trash stars and forks
 
+### CHANGELOG
+
+-   Version 1.0.1
+    -   What a good start
+
 ### Notice
 
 -   We are re-building it with Vue-Router

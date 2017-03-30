@@ -50,7 +50,8 @@ input.re-input {
     background-color: #e1e1e1;
     border-width: 0px;
     border-bottom-width: 1px;
-    HEIGHT: 80%;
+    height: 80%;
+    width: 40%;
 }
 
 .re-top {
