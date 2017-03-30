@@ -4,10 +4,14 @@
 
 ### CHANGELOG
 
--   Version 1.0.1
-    -   What a good start
+-   Version 1.0.3
+    -   Language change through system language
+    -   Update english version of donate and makefile
+    -   Add language constructor of link in index
 -   Version 1.0.2
     -   Update language and icon for donate page
+-   Version 1.0.1
+    -   What a good start
 
 ### Notice
 

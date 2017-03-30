@@ -4,6 +4,7 @@
 /*
  * @author WMXPY
  * @contect wm@wmpcxpy.com
+ * @version 1.0.3
  */
 Vue.component('re-credit', {
     template: '<div><p style="color:#565656"><i class="fa fa-code"></i> Review.md with <i class="fa fa-heart"></i> by WMXPY@<a href="http://mengw.io">mengw.io</a> 2016</p></div>'
@@ -258,19 +259,19 @@ const languages = {
             tutor: 'This doc will guild you create your quiz with Review.md',
             up: 'Just a few click, you got your quiz easy as well',
             parts: 'A quiz file include these parts:',
-            title: 'A question:',
-            question: '1 为什么大象的鼻子比较大',
-            queexp: '<- 最前面的数字不能省略, 也可以用1.0, 5.6的形式.',
-            answer: '几个选项:',
-            option: ['A 因为它很有威力', 'B 因为它很有魅力', 'C 因为它很有勇气'],
-            opexp: '<- 同样的最前面的字母不能省略, 在实际 Quiz 中不会显示.',
-            correct: ' 一个正确答案:',
+            title: 'A Question:',
+            question: '1 Why Elephents have big nose',
+            queexp: '<- Number in front of question is required, form 1.0, 5.6 is also okay.',
+            answer: 'Some Option:',
+            option: ['A Cause He is Strong', 'B Cause He is Charming', 'C Cause He is THE JUSTICE'],
+            opexp: '<- Same, the letter is required, But it will not display in the real quiz.',
+            correct: ' A Correct Notice:',
             good: '%$0',
-            expgood: '<- 最右侧的数字代表正确的答案,0是A,1是B,以此类推',
-            combine: '我们将它们合并 ->',
-            duplicate: '并用这种方法创建你所有的问题 ->',
-            anotherquestion: ['1 为什么大象的鼻子比较大', '2 为什么小象的鼻子比较小', '3 为什么中象的鼻子比较中'],
-            finish: '这样即可创建你最喜欢的题库了, 完成后 Review.md 会帮你自动下载.'
+            expgood: '<- The number is the correct answer,0 means A,1 means B,so on',
+            combine: 'We put them together ->',
+            duplicate: 'Put all your question together ->',
+            anotherquestion: ['1 Why Elephents have big nose', '2 Why Birds have big nose', '3 Why People have big nose'],
+            finish: 'So, thats all you need to do, Review.md will download it auto as soon as you finish.'
         }
     }
 }

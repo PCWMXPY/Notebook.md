@@ -8,7 +8,8 @@
 jQuery(document).ready(function () {
     $.backstretch("./imgs/indexbg.jpg");
     main.updatedisplay();
-    // main.updatesolgan();
+    main.systemlanguage();
+    main.updatesolgan();
 });
 const testdonate = function () {
     console.log('test');
@@ -18,7 +19,7 @@ const rewave = [];
 let main = new Vue({
     el: '#main',
     data: {
-        languages: 'chinese',
+        languages: '',
         welcome: '',
         display: [],
         slogans: [
@@ -27,6 +28,21 @@ let main = new Vue({
         ]
     },
     methods: {
+        systemlanguage: function () {
+            const nava = window.navigator.language;
+            let lan = '';
+            switch (nava.substring(0, 2)) {
+                case 'zh':
+                    lan = 'chinese';
+                    break;
+                case 'en':
+                    lan = 'english';
+                    break;
+                default:
+                    lan = 'english';
+            }
+            this.languages = lan;
+        },
         updatedisplay: function () {
             if (this.languages == 'chinese') {
                 this.display = languages.index.cn;
@@ -62,7 +78,7 @@ let main = new Vue({
             this.updatedisplay();
         },
         donate: function () {
-            window.location.href = './doc/donate/index.html?language=' + this.languages;
+            window.location.href = './doc/donate/?language=' + this.languages;
         },
         reimport: function () {
             window.location.href = './upload/?language=' + this.languages;
@@ -71,7 +87,7 @@ let main = new Vue({
             window.location.href = './create/?mode=create';
         },
         relearn: function () {
-            window.location.href = './doc/makefile';
+            window.location.href = './doc/makefile/?language=' + this.languages;
         },
         pay: function () {
             window.location.href = 'https://www.paypal.me/wmxpy';
