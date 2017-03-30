@@ -20,6 +20,13 @@
     background-color: #fedfb1;
 }
 
+.re-button-small {
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 20px;
+}
+
 .re-flot {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
