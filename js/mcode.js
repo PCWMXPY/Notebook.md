@@ -26,6 +26,15 @@ let rewave = [{
     icon: 'fa-language',
     id: 'languagec'
 }];
+let back = new Vue({
+    el: '#back',
+    data: {
+        display: ''
+    },
+    methods: {
+
+    }
+})
 let title = new Vue({
     el: '#title',
     data: {

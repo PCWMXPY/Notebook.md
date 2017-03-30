@@ -8,8 +8,12 @@
 jQuery(document).ready(function () {
     $.backstretch("./imgs/indexbg.jpg");
     main.updatedisplay();
-    main.updatesolgan();
+    // main.updatesolgan();
 });
+const testdonate = function () {
+    console.log('test');
+    return 0;
+}
 const rewave = [];
 let main = new Vue({
     el: '#main',
@@ -58,7 +62,7 @@ let main = new Vue({
             this.updatedisplay();
         },
         donate: function () {
-            window.location.href = './doc/donate/?language=' + this.languages;
+            window.location.href = './doc/donate/index.html?language=' + this.languages;
         },
         reimport: function () {
             window.location.href = './upload/?language=' + this.languages;

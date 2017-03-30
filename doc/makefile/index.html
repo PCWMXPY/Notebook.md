@@ -8,50 +8,63 @@
     <link href="../../css/style.css" rel="stylesheet">
     <link href="../../lib/bootstrap.min.css" rel="stylesheet">
     <link href="../../lib/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/css/buttons.css" />
 
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="title">
         <div class="row re-title-sm">
             <div class="col-lg-6 col-lg-offset-3">
-                <a style="color:dimgray;" href="../../"><i class="fa fa-arrow-left"></i>&nbsp;返回</a>
+                <a style="color:dimgray;" href="../../"><i class="fa fa-arrow-left"></i>&nbsp;{{display.back}}</a>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3">
                 <div class="re-center">
-                    <h2>这个教程将会指引你与 Review.md 分享创意</h2>
-                    <p>在网站的首页,你可以看到一个妙趣横生的标语.而它是由 Review.md 用户自行创作的.</p>
+                    <h2>{{displayl.tutor}}</h2>
+                    <p>{{displayl.up}}</p>
                 </div>
                 <hr>
                 <ul>
-                    <li>点击这个链接,创建一个你自己的 Github 账号.
-                        <ul>
-                            <li>
-                                <a href="https://github.com">-> GITHUB</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>访问位于 Github 的 Review.md 的创意贡献地址, 点击右侧的 fork.
-                        <ul>
-                            <li>
-                                <a href="https://github.com/WYJBD/SLOGAN/blob/master/Review.slogan">-> Review.md 在 Github 的地址</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>在跳转的界面里,点击文件 Review.title 点击文本查看器右上角的编辑.</li>
-                    <li>完成对文件的编辑之后保存, 点击发送 Pull Request, 仅两三分钟即可完成.</li>
+                    <li><strong>{{displayl.parts}}</strong></li>
+                    <ul>
+                        <li><strong>{{displayl.title}}</strong></li>
+                        <li><em>{{displayl.question}}</em>&nbsp;{{displayl.queexp}}</li>
+                        <li><strong>{{displayl.answer}}</strong></li>
+                        <li v-for="(option,index) in displayl.option"><em>{{option}}</em><span v-if="index==0">&nbsp;{{displayl.opexp}}</span></li>
+                        <li><strong>{{displayl.correct}}</strong></li>
+                        <li><em>{{displayl.good}}</em>&nbsp;{{displayl.expgood}}</li>
+                    </ul>
+                    <li><strong>{{displayl.combine}}</strong></li>
+                    <ul>
+                        <em>{{displayl.question}}<br>
+                        <span v-for="option in displayl.option">{{option}}<br></span>
+                        {{displayl.good}}</em>
+                    </ul>
+                    <li><strong>{{displayl.duplicate}}</strong></li>
+                    <ul>
+                        <em v-for="option in displayl.anotherquestion">{{option}}<br>
+                        ...<br>
+                        {{displayl.good}}<br></em>
+                    </ul>
+                    <li><strong>{{displayl.finish}}</strong></li>
                 </ul>
                 <hr>
                 <ul>
-                    <p>我们强烈建议你尝试并使用 Github, 但你也可以发送邮件到 <a href="mailto:rvw@wmpcxpy.com">rvw@wmpcxpy.com</a> 提交你的作品.</p>
-                    <p>同样的, 你也可以发送邮件到上述邮箱请求公开你创建的题库.</p>
+                    <p>{{display.email}} <a href="mailto:rvw@wmpcxpy.com">rvw@wmpcxpy.com</a> {{display.product}}</p>
+                    <p>{{display.same}}</p>
+                    <re-credit></re-credit>
                 </ul>
             </div>
         </div>
+        <re-wave></re-wave>
     </div>
 </body>
-<!--<script src="../js/donate.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/js/buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
+<script src="../../js/test.js"></script>
+<script src="../../js/donate.js"></script>
 
 </html>

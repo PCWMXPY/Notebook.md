@@ -131,13 +131,13 @@ function gotoTop(min_height) {
     });
 };
 
-function getURLVar(name) {
-    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+function getURLVar(string) {
+    return decodeURIComponent((new RegExp('[?|&]' + string + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 }
 
-function URLencode(sStr) {
+function URLencode(string) {
 
-    return escape(sStr).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
+    return escape(string).replace(/\+/g, '%2B').replace(/\"/g, '%22').replace(/\'/g, '%27').replace(/\//g, '%2F');
 
 }
 const languages = {
@@ -207,6 +207,7 @@ const languages = {
     },
     donate: {
         cn: {
+            back: '返回',
             creative: '这个教程将会指引你与 Review.md 分享创意',
             index: '在网站的首页,你可以看到一个妙趣横生的标语.而它是由 Review.md 用户自行创作的.',
             link: '点击这个链接,创建一个你自己的 Github 账号.',
@@ -219,6 +220,7 @@ const languages = {
             same: '同样的, 你也可以发送邮件到上述邮箱请求公开你创建的题库.'
         },
         en: {
+            back: 'Back',
             creative: 'This doc will guild you share idea with Review.md',
             index: 'Our user created interesting tag by themself.',
             link: 'Click this link to register your own Github account.',
@@ -233,10 +235,42 @@ const languages = {
     },
     learn: {
         cn: {
-
+            back: '返回',
+            tutor: '这个教程将会指引你建立自己的题库文件',
+            up: '只需要点几下鼠标就可以在 Review.md 上使用你的题库',
+            parts: '一个题库由以下的部分组成:',
+            title: '一个题目:',
+            question: '1 为什么大象的鼻子比较大',
+            queexp: '<- 最前面的数字不能省略, 也可以用1.0, 5.6的形式.',
+            answer: '几个选项:',
+            option: ['A 因为它很有威力', 'B 因为它很有魅力', 'C 因为它很有勇气'],
+            opexp: '<- 同样的最前面的字母不能省略, 在实际 Quiz 中不会显示.',
+            correct: ' 一个正确答案:',
+            good: '%$0',
+            expgood: '<- 最右侧的数字代表正确的答案,0是A,1是B,以此类推',
+            combine: '我们将它们合并 ->',
+            duplicate: '并用这种方法创建你所有的问题 ->',
+            anotherquestion: ['1 为什么大象的鼻子比较大', '2 为什么小象的鼻子比较小', '3 为什么中象的鼻子比较中'],
+            finish: '这样即可创建你最喜欢的题库了, 完成后 Review.md 会帮你自动下载.'
         },
         en: {
-
+            back: 'Back',
+            tutor: 'This doc will guild you create your quiz with Review.md',
+            up: 'Just a few click, you got your quiz easy as well',
+            parts: 'A quiz file include these parts:',
+            title: 'A question:',
+            question: '1 为什么大象的鼻子比较大',
+            queexp: '<- 最前面的数字不能省略, 也可以用1.0, 5.6的形式.',
+            answer: '几个选项:',
+            option: ['A 因为它很有威力', 'B 因为它很有魅力', 'C 因为它很有勇气'],
+            opexp: '<- 同样的最前面的字母不能省略, 在实际 Quiz 中不会显示.',
+            correct: ' 一个正确答案:',
+            good: '%$0',
+            expgood: '<- 最右侧的数字代表正确的答案,0是A,1是B,以此类推',
+            combine: '我们将它们合并 ->',
+            duplicate: '并用这种方法创建你所有的问题 ->',
+            anotherquestion: ['1 为什么大象的鼻子比较大', '2 为什么小象的鼻子比较小', '3 为什么中象的鼻子比较中'],
+            finish: '这样即可创建你最喜欢的题库了, 完成后 Review.md 会帮你自动下载.'
         }
     }
 }
