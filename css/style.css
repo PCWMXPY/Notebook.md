@@ -20,11 +20,20 @@
     background-color: #fedfb1;
 }
 
-.re-button-small {
+.re-button-small-re-yellow {
     font-size: 10px;
     height: 20px;
     line-height: 20px;
     padding: 0 20px;
+    background-color: #fedfb1;
+}
+
+.re-button-small-re-red {
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 20px;
+    background-color: #ff6e6e;
 }
 
 .re-flot {

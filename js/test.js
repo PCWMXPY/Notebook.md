@@ -151,7 +151,8 @@ const languages = {
             input: '导入题库文件',
             create: '创建题库文件',
             mcode: '输入神秘代码',
-            learn: '学习如何建立Reviwe.md的题库'
+            learn: '学习如何建立 Reviwe.md 的题库',
+            pay: '在 Paypal 帮助 Review.md 的服务器运行更久'
         },
         en: {
             welcome: 'Welcome',
@@ -162,7 +163,8 @@ const languages = {
             input: 'Upload Quiz file',
             create: 'Create Quiz file',
             mcode: 'Enter Mystery Code',
-            learn: 'Learn how to build your own Quiz file'
+            learn: 'Learn how to build your own Quiz file',
+            pay: 'Help Review.md Run longer by Paypal donate'
         }
     },
     quiztitle: {

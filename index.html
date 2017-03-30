@@ -38,10 +38,11 @@
                     <div class="re-buttons">
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="reimport">{{display.input}}</button>
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="recreate">{{display.create}}</button>
-                        <button type="button" class="re-button-second button button-block button-rounded re-button-small" v-on:click="relearn">{{display.learn}}</button>
+                        <button type="button" class="re-button-second button button-block button-rounded re-button-small-re-yellow" v-on:click="relearn">{{display.learn}}</button>
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="remcode">{{display.mcode}}</button>
                         <hr>
                         <button type="button" class="re-button button button-block button-rounded" v-on:click="remcode(this,'t110final')">THTRE 110 FINAL</button>
+                        <button type="button" class="re-button-second button button-block button-rounded re-button-small-re-red" v-on:click="pay">{{display.pay}}</button>
                     </div>
                     <re-credit></re-credit>
                     <re-wave></re-wave>

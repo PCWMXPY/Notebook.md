@@ -69,6 +69,9 @@ let main = new Vue({
         relearn: function () {
             window.location.href = './doc/makefile';
         },
+        pay: function () {
+            window.location.href = 'https://www.paypal.me/wmxpy';
+        },
         remcode: function (events, code) {
             console.log(code);
             if (code == undefined) {
