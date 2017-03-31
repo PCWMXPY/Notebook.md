@@ -4,7 +4,7 @@
 /*
  * @author WMXPY
  * @contect wm@wmpcxpy.com
- * @version 1.0.7
+ * @version 1.0.8
  */
 const pageVersion = '1.0.7';
 Vue.component('re-credit', {

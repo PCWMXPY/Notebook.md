@@ -10,12 +10,33 @@ jQuery(document).ready(function () {
     main.systemlanguage();
     main.updatedisplay();
     main.updatesolgan();
+    document.getElementById('re-repeat').addEventListener('click', function () {
+        if (recstat == -1) {
+            let target = [];
+            if (main.languages == 'chinese') {
+                target = main.slogans[1];
+            } else {
+                target = main.slogans[0];
+            }
+            recstat = Cv$.Caper(main, {
+                elem: 'welcome',
+                content: target
+            })
+        } else {
+            clearInterval(recstat);
+            recstat = -1;
+        }
+    });
 });
 const testdonate = function () {
     console.log('test');
     return 0;
 }
-const rewave = [];
+const rewave = [{
+    icon: 'fa-bath',
+    id: 're-repeat'
+}];
+var recstat = -1;
 var main = new Vue({
     el: '#main',
     data: {

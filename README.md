@@ -4,6 +4,8 @@
 
 ### CHANGELOG
 
+-   Version 1.0.8
+    -   Add repeat slogan function
 -   Version 1.0.7
     -   Update Hr
     -   Fix bug on icon (deleted it :D)
