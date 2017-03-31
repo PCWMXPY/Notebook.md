@@ -4,7 +4,7 @@
 /*
  * @author WMXPY
  * @contect wm@wmpcxpy.com
- * @version 1.0.3
+ * @version 1.0.11
  */
 Vue.component('re-credit', {
     template: '<div><p style="color:#565656"><i class="fa fa-code"></i> Review.md with <i class="fa fa-heart"></i> by WMXPY@<a href="http://mengw.io">mengw.io</a> 2016</p></div>'
@@ -150,10 +150,11 @@ const languages = {
             donate: '为 Review.md 提供灵感',
             language: 'Discover Review.md in <strong>English</strong>',
             input: '导入题库文件',
-            create: '创建题库文件',
+            create: '创建题库文件 (开发中)',
             mcode: '输入神秘代码',
-            learn: '学习如何建立 Reviwe.md 的题库',
-            pay: '在 Paypal 帮助 Review.md 的服务器运行更久'
+            learn: '学习如何手动建立 Reviwe.md 的题库',
+            pay: '在 Paypal 帮助 Review.md 的服务器运行更久',
+            temp: '热门:'
         },
         en: {
             welcome: 'Welcome',
@@ -162,10 +163,11 @@ const languages = {
             donate: 'Share your idea with Review.md',
             language: '用<strong>中文</strong>浏览 Review.md',
             input: 'Upload Quiz file',
-            create: 'Create Quiz file',
+            create: 'Create Quiz file (In development)',
             mcode: 'Enter Mystery Code',
-            learn: 'Learn how to build your own Quiz file',
-            pay: 'Help Review.md Run longer by Paypal donate'
+            learn: 'Learn how to build your own Quiz file manual',
+            pay: 'Help Review.md Run longer by Paypal donate',
+            temp: 'Featured:'
         }
     },
     quiztitle: {

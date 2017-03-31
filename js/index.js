@@ -7,8 +7,8 @@
  */
 jQuery(document).ready(function () {
     $.backstretch("./imgs/indexbg.jpg");
-    main.updatedisplay();
     main.systemlanguage();
+    main.updatedisplay();
     main.updatesolgan();
 });
 const testdonate = function () {
@@ -31,18 +31,12 @@ let main = new Vue({
     methods: {
         systemlanguage: function () {
             const nava = window.navigator.language;
-            let lan = '';
-            switch (nava.substring(0, 2)) {
-                case 'zh':
-                    lan = 'chinese';
-                    break;
-                case 'en':
-                    lan = 'english';
-                    break;
-                default:
-                    lan = 'english';
+            if (nava.substring(0, 2) == 'zh') {
+                this.languages = 'chinese';
+            } else {
+                this.languages = 'english';
             }
-            this.languages = lan;
+            console.log(this.languages);
         },
         updatedisplay: function () {
             if (this.languages == 'chinese') {

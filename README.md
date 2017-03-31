@@ -4,6 +4,10 @@
 
 ### CHANGELOG
 
+-   Version 1.0.5
+    -   Update temp quate in index
+    -   fix language bug
+    -   disable unuseable button
 -   Version 1.0.4
     -   fix bugs, update margin
 -   Version 1.0.3

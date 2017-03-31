@@ -28,12 +28,23 @@
     background-color: #fedfb1;
 }
 
+.re-button-medium {
+    width: 100%;
+    font-size: 15px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 32px;
+    background-color: #e9cb9d;
+    color: #808080;
+}
+
 .re-button-small-re-red {
     font-size: 10px;
     height: 20px;
     line-height: 20px;
     padding: 0 20px;
     background-color: #ff6e6e;
+    color: #636363;
 }
 
 .re-flot {
