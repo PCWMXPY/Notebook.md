@@ -26,7 +26,7 @@ var main = new Vue({
             [],
             []
         ],
-        version: '1.0.4'
+        version: pageVersion
     },
     methods: {
         systemlanguage: function () {

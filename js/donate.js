@@ -18,7 +18,7 @@ let rewave = [{
     icon: 'fa-language',
     id: 'languagec'
 }];
-let main = new Vue({
+var main = new Vue({
     el: '#title',
     data: {
         languages: 'chinese',

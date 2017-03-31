@@ -4,6 +4,8 @@
 
 ### CHANGELOG
 
+-   Version 1.0.6
+    -   Support Safari
 -   Version 1.0.5
     -   Update temp quate in index
     -   fix language bug

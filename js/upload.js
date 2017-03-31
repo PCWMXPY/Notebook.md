@@ -35,7 +35,7 @@ let rewave = [{
     icon: 'fa-language',
     id: 'languagec'
 }];
-let title = new Vue({
+var title = new Vue({
     el: '#title',
     data: {
         buttondis: false,
@@ -72,7 +72,7 @@ let title = new Vue({
         }
     }
 });
-let app = new Vue({
+var app = new Vue({
     el: '#main',
     data: {
         tests: [],
