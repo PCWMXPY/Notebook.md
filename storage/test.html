@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="test">{{test}}</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
+<script src="../lib/caper.js"></script>
+<script>
+    let test = new Vue({
+        el: '#test',
+        data: {
+            test: '1',
+            array: ['2', '7', 's']
+        }
+    })
+    Cv$.Caper(test, {
+        content: test.array
+    })
+</script>
+
+</html>
