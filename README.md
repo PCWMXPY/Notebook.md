@@ -4,6 +4,8 @@
 
 ### CHANGELOG
 
+-   Version 1.0.4
+    -   fix bugs, update margin
 -   Version 1.0.3
     -   Language change through system language
     -   Update english version of donate and makefile

@@ -25,7 +25,8 @@ let main = new Vue({
         slogans: [
             [],
             []
-        ]
+        ],
+        version: '1.0.4'
     },
     methods: {
         systemlanguage: function () {
