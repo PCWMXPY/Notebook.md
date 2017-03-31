@@ -16,7 +16,7 @@ const testdonate = function () {
     return 0;
 }
 const rewave = [];
-let main = new Vue({
+var main = new Vue({
     el: '#main',
     data: {
         languages: '',
@@ -36,7 +36,6 @@ let main = new Vue({
             } else {
                 this.languages = 'english';
             }
-            console.log(this.languages);
         },
         updatedisplay: function () {
             if (this.languages == 'chinese') {
