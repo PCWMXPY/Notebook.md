@@ -4,6 +4,9 @@
 
 ### CHANGELOG
 
+-   Version 1.0.7
+    -   Update Hr
+    -   Fix bug on icon (deleted it :D)
 -   Version 1.0.6
     -   Support Safari
 -   Version 1.0.5
