@@ -4,9 +4,9 @@
 /*
  * @author WMXPY
  * @contect wm@wmpcxpy.com
- * @version 1.0.8
+ * @version 1.0.9
  */
-const pageVersion = '1.0.7';
+const pageVersion = '1.0.9';
 Vue.component('re-credit', {
     template: '<div><p style="color:#565656"><i class="fa fa-code"></i> Review.md with <i class="fa fa-heart"></i> by WMXPY@<a href="http://mengw.io">mengw.io</a> 2016</p></div>'
 });
@@ -277,13 +277,13 @@ const languages = {
             finish: 'So, thats all you need to do, Review.md will download it auto as soon as you finish.'
         }
     },
-    ob:{
-        cn:{
+    ob: {
+        cn: {
             back: '返回',
             topic: '神秘代码列表'
         },
-        en:{
-             back: 'Back',
+        en: {
+            back: 'Back',
             topic: 'Mystery Code List'
         }
     }

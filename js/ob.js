@@ -15,13 +15,13 @@ let rewave = [{
 }];
 var main = new Vue({
     el: '#main',
-    data:{
-         languages: 'chinese',
-         display: {},
+    data: {
+        languages: 'chinese',
+        display: {},
         test: 'test'
     },
-    methods:{
-        updatelanguage: function(){
+    methods: {
+        updatelanguage: function () {
             if (this.languages == 'chinese') {
                 this.display = languages.ob.cn;
             } else {

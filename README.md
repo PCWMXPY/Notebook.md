@@ -4,6 +4,10 @@
 
 ### CHANGELOG
 
+-   Version 1.0.9
+    -   Add content to ob page
+    -   Fix bugs
+    -   Clean codes
 -   Version 1.0.8
     -   Add repeat slogan function
 -   Version 1.0.7
