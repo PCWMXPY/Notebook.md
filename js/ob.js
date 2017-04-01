@@ -7,7 +7,26 @@
  */
 jQuery(document).ready(function () {
     $.backstretch("../../imgs/indexbg.jpg");
+    main.updatelanguage();
 });
-Vue.component('re-credit', {
-    template: '<div><p style="color:#565656"><i class="fa fa-code"></i> Review.md with <i class="fa fa-heart"></i> by WMXPY@<a href="http://mengw.io">mengw.io</a> 2016</p></div>'
-});
+let rewave = [{
+    icon: 'fa-language',
+    id: 'languagec'
+}];
+var main = new Vue({
+    el: '#main',
+    data:{
+         languages: 'chinese',
+         display: {},
+        test: 'test'
+    },
+    methods:{
+        updatelanguage: function(){
+            if (this.languages == 'chinese') {
+                this.display = languages.ob.cn;
+            } else {
+                this.display = languages.ob.en;
+            }
+        }
+    }
+})

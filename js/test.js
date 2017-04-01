@@ -276,5 +276,15 @@ const languages = {
             anotherquestion: ['1 Why Elephents have big nose', '2 Why Birds have big nose', '3 Why People have big nose'],
             finish: 'So, thats all you need to do, Review.md will download it auto as soon as you finish.'
         }
+    },
+    ob:{
+        cn:{
+            back: '返回',
+            topic: '神秘代码列表'
+        },
+        en:{
+             back: 'Back',
+            topic: 'Mystery Code List'
+        }
     }
 }
