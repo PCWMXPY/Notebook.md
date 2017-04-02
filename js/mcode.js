@@ -22,9 +22,14 @@ jQuery(document).ready(function () {
     title.updatelanguage();
 });
 let rewave = [{
-    icon: 'fa-language',
-    id: 'languagec'
-}];
+        icon: 'fa-language',
+        id: 'languagec'
+    },
+    {
+        icon: 'fa-anchor',
+        id: 'anchor'
+    }
+];
 var back = new Vue({
     el: '#back',
     data: {
