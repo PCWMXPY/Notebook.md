@@ -1,3 +1,3 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-echo $http_response_header;
+echo $_SERVER['HTTP_REQUEST_DOMAIN'];
