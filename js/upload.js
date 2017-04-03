@@ -29,12 +29,20 @@ jQuery(document).ready(function () {
         }
         title.updatelanguage();
     });
+    document.getElementById('massup').addEventListener('click', function () {
+        app.mass();
+    });
     title.updatelanguage();
 });
 let rewave = [{
-    icon: 'fa-language',
-    id: 'languagec'
-}];
+        icon: 'fa-language',
+        id: 'languagec'
+    },
+    {
+        icon: 'fa-random',
+        id: 'massup'
+    }
+];
 var title = new Vue({
     el: '#title',
     data: {
@@ -83,6 +91,11 @@ var app = new Vue({
     computed: {},
     watch: {},
     methods: {
+        mass: function () {
+            this.tests.sort(function () {
+                return 0.5 - Math.random()
+            })
+        },
         updatelanguage: function (lan) {
             if (lan == 'chinese') {
                 this.display = languages.quiz.cn;

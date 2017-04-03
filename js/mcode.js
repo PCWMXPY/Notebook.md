@@ -19,6 +19,9 @@ jQuery(document).ready(function () {
         }
         title.updatelanguage();
     });
+    document.getElementById('massup').addEventListener('click', function () {
+        app.mass();
+    });
     title.updatelanguage();
 });
 let rewave = [{
@@ -26,8 +29,8 @@ let rewave = [{
         id: 'languagec'
     },
     {
-        icon: 'fa-anchor',
-        id: 'anchor'
+        icon: 'fa-random',
+        id: 'massup'
     }
 ];
 var back = new Vue({
@@ -102,6 +105,11 @@ var app = new Vue({
     },
     watch: {},
     methods: {
+        mass: function () {
+            this.tests.sort(function () {
+                return 0.5 - Math.random()
+            })
+        },
         updatelanguage: function (lan) {
             if (lan == 'chinese') {
                 this.display = languages.quiz.cn;
