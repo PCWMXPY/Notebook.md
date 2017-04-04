@@ -22,6 +22,12 @@ jQuery(document).ready(function () {
     document.getElementById('massup').addEventListener('click', function () {
         app.mass();
     });
+    document.getElementById('shuffleall').addEventListener('click', function () {
+        app.massall();
+    });
+    document.getElementById('shufflean').addEventListener('click', function () {
+        app.massanswer();
+    });
     title.updatelanguage();
 });
 let rewave = [{
@@ -31,6 +37,14 @@ let rewave = [{
     {
         icon: 'fa-random',
         id: 'massup'
+    },
+    {
+        icon: 'fa-gg-circle',
+        id: 'shufflean'
+    },
+    {
+        icon: 'fa-magic',
+        id: 'shuffleall'
     }
 ];
 var back = new Vue({
@@ -109,6 +123,18 @@ var app = new Vue({
             this.tests.sort(function () {
                 return 0.5 - Math.random()
             })
+        },
+        massanswer: function () {
+            const thislength = this.tests.length;
+            for (let i = 0; i < thislength; i++) {
+                this.tests[i].sort(function () {
+                    return 0.5 - Math.random()
+                })
+            }
+        },
+        massall: function () {
+            this.mass();
+            this.massanswer();
         },
         updatelanguage: function (lan) {
             if (lan == 'chinese') {

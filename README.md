@@ -4,6 +4,8 @@
 
 ### CHANGELOG
 
+-   Version 1.1.13
+    -   Update functions
 -   Version 1.0.11
     -   Add function to mass ops up
 -   Version 1.0.10
