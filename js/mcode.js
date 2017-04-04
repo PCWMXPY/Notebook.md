@@ -127,7 +127,7 @@ var app = new Vue({
         massanswer: function () {
             const thislength = this.tests.length;
             for (let i = 0; i < thislength; i++) {
-                this.tests[i].sort(function () {
+                this.tests[i].answer.sort(function () {
                     return 0.5 - Math.random()
                 })
             }
