@@ -287,12 +287,28 @@ const languages = {
     },
     ob: {
         cn: {
+            how: '我该怎么使用这串代码?',
+            publish: '我也想在 Review.md 上发布题目!',
             back: '返回',
-            topic: '神秘代码列表'
+            topic: '神秘代码列表',
+            exam: '题库:',
+            code: '神秘代码:',
+            questions: '题库大小:',
+            left: '有 ',
+            right: ' 人使用了这个题库.',
+            start: '现在就开始 '
         },
         en: {
+            how: 'How to use this code?',
+            publish: 'I want to publish my Quiz to Review.md too!',
             back: 'Back',
-            topic: 'Mystery Code List'
+            topic: 'Mystery Code List',
+            exam: 'Quiz:',
+            code: 'MysteryCode:',
+            questions: 'Quiz Size:',
+            left: 'There are ',
+            right: ' people took this quiz.',
+            start: 'Start to use '
         }
     }
 }

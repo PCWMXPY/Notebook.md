@@ -37,17 +37,20 @@ var main = new Vue({
         test: 'test'
     },
     methods: {
-        updatelanguage: function () {
+        updatelanguage: () => {
             if (this.languages == 'chinese') {
                 this.display = languages.ob.cn;
             } else {
                 this.display = languages.ob.en;
             }
         },
-        getexamlist: function () {
+        getexamlist: () => {
             featurefunctions.getlist(() => {
 
             });
+        },
+        startquiz: target => {
+            console.log(target);
         }
     }
 })

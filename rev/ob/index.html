@@ -27,8 +27,20 @@
         </div>
         <div class="row">
             <div class="col-md-10 col-md-offset-1 re-bot bg-color-bot re-questions">
+                <br>
+                <a href="../../doc/usecode/"><i class="fa fa-question-circle"></i>&nbsp;{{display.how}}</a><br>
+                <a href="../../doc/donate/"><i class="fa fa-heart"></i>&nbsp;{{display.publish}}</a>
                 <div v-for="file in filelist">
-                    {{file}}
+                    <hr>
+                    <div style="padding-left:30px;">
+                        <span> {{display.exam}}<strong>{{file.examname}}</strong></span><br>
+                        <span>{{display.code}}<strong>{{file.mcode}}</strong></span><br>
+                        <span> {{display.questions}}<strong>{{file.questions}}</strong></span><br>
+                        <span>{{display.left}}<strong>{{file.visits}}</strong>{{display.right}}</span>
+                    </div>
+                    <button v-on:click="startquiz(file.mcode)" class="re-button button button-block button-rounded">
+                        {{display.start}}<strong>{{file.examname}}</strong>
+                    </button>
                 </div>
                 <re-credit></re-credit>
             </div>
