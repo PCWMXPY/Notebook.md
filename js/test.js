@@ -31,6 +31,7 @@ const displaytips = (rewave, display, language) => {
             setTimeout(() => {
                 layer.tips(lan.setting, '#re-wave-setting', {
                     tips: 4,
+                    // time: 100000,
                     tipsMore: true
                 });
             }, i * 100 + 200);
