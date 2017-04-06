@@ -4,9 +4,9 @@
 /*
  * @author WMXPY
  * @contect wm@wmpcxpy.com
- * @version 1.1.14
+ * @version 1.2.1
  */
-const pageVersion = '1.1.14';
+const pageVersion = '1.2.1';
 Vue.component('re-credit', {
     template: '<div><p style="color:#565656"><i class="fa fa-code"></i> Review.md with <i class="fa fa-heart"></i> by WMXPY@<a href="http://mengw.io">mengw.io</a> 2016</p></div>'
 });
@@ -21,8 +21,36 @@ Vue.component('re-wave', {
             this.buttonsinvue = rewave;
         }
     },
-    template: '<div class="div_right_bottom"><span class="button-dropdown" data-buttons="dropdown"><button class="button button-rounded button-square"><i class="fa fa-caret-down"></i></button><ul class="button-dropdown-list"><li><button id="gotoTop" onclick="backtotop()" class="button button-square"><i class="fa fa-arrow-up"></i></button></li><li><button class="button button-square"><i class="fa fa-cog"></i></button></li><li v-for="butt in buttonsinvue"><button class="button button-square" v-bind:id="butt.id"><i class="fa" v-bind:class="butt.icon"></i></button></li><li><button class="button button-square" onclick="window.open(\'https://github.com/PCWMXPY/Notebook.md\')"><i class="fa fa-github"></i></button></li></ul></span><button v-on:click="updatebutton" id="re-waveupdatebutton" style="display:none;"></button></div>'
+    template: '<div class="div_right_bottom"><span class="button-dropdown" data-buttons="dropdown"><button class="button button-rounded button-square" id="re-wave"><i class="fa fa-caret-down"></i></button><ul class="button-dropdown-list"><li><button id="gotoTop" onclick="backtotop()" class="button button-square"><i class="fa fa-arrow-up"></i></button></li><li><button class="button button-square" id="re-wave-setting"><i class="fa fa-cog"></i></button></li><li v-for="butt in buttonsinvue"><button class="button button-square" v-bind:id="butt.id"><i class="fa" v-bind:class="butt.icon"></i></button></li><li><button class="button button-square" id="re-wave-github" onclick="window.open(\'https://github.com/PCWMXPY/Notebook.md\')"><i class="fa fa-github"></i></button></li></ul></span><button v-on:click="updatebutton" id="re-waveupdatebutton" style="display:none;"></button></div>'
 });
+const displaytips = (rewave, display, language) => {
+    const length = display.length;
+    const lan = (language == 'chinese') ? languages.test.cn : languages.test.en;
+    for (let i = -1; i < length + 1; i++) {
+        if (i == -1) {
+            setTimeout(() => {
+                layer.tips(lan.setting, '#re-wave-setting', {
+                    tips: 4,
+                    tipsMore: true
+                });
+            }, i * 100 + 200);
+        } else if (i == length) {
+            setTimeout(() => {
+                layer.tips(lan.github, '#re-wave-github', {
+                    tips: 4,
+                    tipsMore: true
+                });
+            }, i * 100 + 200);
+        } else {
+            setTimeout(() => {
+                layer.tips(display[i], '#' + rewave[i].id, {
+                    tips: 4,
+                    tipsMore: true
+                });
+            }, i * 100 + 200);
+        }
+    }
+}
 const updatebutton = function () {
     document.getElementById('re-waveupdatebutton').click();
 }
@@ -78,9 +106,11 @@ const featurefunctions = {
             }
         })
     },
-    getlist: function (successs) {
+    getlist: function (u, successs) {
+        let url = '../php/getlist.php';
+        if (u == 0) url = '../../php/getlist.php';
         Ca$.get({
-            url: '../php/getlist.php',
+            url: url,
             data: {},
             success: function (data) {
                 successs(data);
@@ -151,6 +181,16 @@ function URLencode(string) {
 
 }
 const languages = {
+    test: {
+        cn: {
+            setting: '设置',
+            github: '访问Review.md的Github'
+        },
+        en: {
+            setting: 'Setting',
+            github: 'Visit Github of Review.md'
+        }
+    },
     index: {
         cn: {
             welcome: '欢迎',
@@ -287,8 +327,10 @@ const languages = {
     },
     ob: {
         cn: {
+            rewave: ['切换语言'],
             how: '我该怎么使用这串代码?',
             publish: '我也想在 Review.md 上发布题目!',
+            above: '上面这串怕不是真的神秘代码?',
             back: '返回',
             topic: '神秘代码列表',
             exam: '题库:',
@@ -299,8 +341,10 @@ const languages = {
             start: '现在就开始 '
         },
         en: {
+            rewave: ['Switch Language'],
             how: 'How to use this code?',
             publish: 'I want to publish my Quiz to Review.md too!',
+            above: 'OMG, is the real MYSTERYY CODE?????',
             back: 'Back',
             topic: 'Mystery Code List',
             exam: 'Quiz:',

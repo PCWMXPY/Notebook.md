@@ -26,8 +26,10 @@
             </div>
         </div>
         <div class="row">
+            <div id="errordisplay"></div>
             <div class="col-md-10 col-md-offset-1 re-bot bg-color-bot re-questions">
                 <br>
+                <i class="fa fa-hand-pointer-o"></i>&nbsp;{{display.above}}<br>
                 <a href="../../doc/usecode/"><i class="fa fa-question-circle"></i>&nbsp;{{display.how}}</a><br>
                 <a href="../../doc/donate/"><i class="fa fa-heart"></i>&nbsp;{{display.publish}}</a>
                 <div v-for="file in filelist">
@@ -50,9 +52,9 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/js/buttons.min.js"></script>
+<script src="../../lib/buttons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.js"></script>
-
+<script src="https://cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
 
 <script src="../../lib/caper.js"></script>
 <script src="../../js/test.js"></script>

@@ -4,6 +4,10 @@
 
 ### CHANGELOG
 
+-   Version 1.2.1
+    -   HUGE PROGRASSIVE
+    -   Update ob page to observe all available mystery code
+    -   Add tips for the condition in right corner menu
 -   Version 1.1.14
     -   Working on ob list
     -   Fix bugs

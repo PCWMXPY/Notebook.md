@@ -5,6 +5,9 @@
  * @author WMXPY
  * @contect wm@wmpcxpy.com
  */
+let control = {
+    trans: false
+}
 jQuery(document).ready(function () {
     $.backstretch("../../imgs/indexbg.jpg");
     if (getURLVar('language') != null) main.languages = getURLVar('language');
@@ -15,7 +18,12 @@ jQuery(document).ready(function () {
             main.languages = 'chinese'
         }
         main.updatelanguage();
-    })
+    });
+    document.getElementById('re-wave').addEventListener('click', () => {
+        displaytips(rewave, main.display.rewave, main.languages);
+    });
+    // main.tesst();
+    main.getexamlist();
     main.updatelanguage();
 });
 let rewave = [{
@@ -25,28 +33,27 @@ let rewave = [{
 var main = new Vue({
     el: '#main',
     data: {
-        filelist: [{
-            examname: 'test',
-            description: 'null',
-            mcode: 'testmcode',
-            visits: 10,
-            questions: 5
-        }],
+        filelist: [],
         languages: 'chinese',
         display: {},
         test: 'test'
     },
     methods: {
-        updatelanguage: () => {
+        updatelanguage: function () {
+            // console.log(languages);
             if (this.languages == 'chinese') {
                 this.display = languages.ob.cn;
             } else {
                 this.display = languages.ob.en;
             }
         },
+        tesst: function () {
+            console.log('test');
+        },
         getexamlist: () => {
-            featurefunctions.getlist(() => {
-
+            featurefunctions.getlist(0, data => {
+                data = JSON.parse(data);
+                main.filelist = data;
             });
         },
         startquiz: target => {
