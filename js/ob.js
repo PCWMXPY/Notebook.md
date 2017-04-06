@@ -7,6 +7,15 @@
  */
 jQuery(document).ready(function () {
     $.backstretch("../../imgs/indexbg.jpg");
+    if (getURLVar('language') != null) main.languages = getURLVar('language');
+    document.getElementById('languagec').addEventListener('click', () => {
+        if (main.languages == 'chinese') {
+            main.languages = 'english';
+        } else {
+            main.languages = 'chinese'
+        }
+        main.updatelanguage();
+    })
     main.updatelanguage();
 });
 let rewave = [{
@@ -16,6 +25,13 @@ let rewave = [{
 var main = new Vue({
     el: '#main',
     data: {
+        filelist: [{
+            examname: 'test',
+            description: 'null',
+            mcode: 'testmcode',
+            visits: 10,
+            questions: 5
+        }],
         languages: 'chinese',
         display: {},
         test: 'test'
@@ -29,7 +45,7 @@ var main = new Vue({
             }
         },
         getexamlist: function () {
-            featurefunctions.getlist(function () {
+            featurefunctions.getlist(() => {
 
             });
         }

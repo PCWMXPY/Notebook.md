@@ -21,13 +21,15 @@
         </div>
         <div class="row">
             <div class="col-md-10 col-md-offset-1 re-top bg-color-top re-h2">
-                <h2> {{display.topic}}</h2>
+                <h2>{{display.topic}}</h2>
                 lr: 23411 / 11 nv: 1 qxz: 9 bc: 13 yrj: 8-7g {{test}}
             </div>
         </div>
         <div class="row">
             <div class="col-md-10 col-md-offset-1 re-bot bg-color-bot re-questions">
-                test
+                <div v-for="file in filelist">
+                    {{file}}
+                </div>
                 <re-credit></re-credit>
             </div>
         </div>
