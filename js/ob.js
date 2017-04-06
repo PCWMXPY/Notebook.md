@@ -27,6 +27,11 @@ var main = new Vue({
             } else {
                 this.display = languages.ob.en;
             }
+        },
+        getexamlist: function () {
+            featurefunctions.getlist(function () {
+
+            });
         }
     }
 })

@@ -4,9 +4,9 @@
 /*
  * @author WMXPY
  * @contect wm@wmpcxpy.com
- * @version 1.1.13
+ * @version 1.1.14
  */
-const pageVersion = '1.1.13';
+const pageVersion = '1.1.14';
 Vue.component('re-credit', {
     template: '<div><p style="color:#565656"><i class="fa fa-code"></i> Review.md with <i class="fa fa-heart"></i> by WMXPY@<a href="http://mengw.io">mengw.io</a> 2016</p></div>'
 });
@@ -57,7 +57,6 @@ const featurefunctions = {
         return re;
     },
     getquestionbymcode: function (mcode, successs) {
-        console.log(mcode);
         Ca$.get({
             url: '../php/getquestionbymcode.php',
             data: {
@@ -76,6 +75,15 @@ const featurefunctions = {
             },
             success: function (data) {
                 document.getElementById('debug').innerHTML = data;
+            }
+        })
+    },
+    getlist: function (successs) {
+        Ca$.get({
+            url: '../php/getlist.php',
+            data: {},
+            success: function (data) {
+                successs(data);
             }
         })
     },
