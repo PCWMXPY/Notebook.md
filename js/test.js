@@ -19,12 +19,15 @@ Vue.component('re-wave', {
     methods: {
         updatebutton: function () {
             this.buttonsinvue = rewave;
+        },
+        displaytips: () => {
+            displaytips(rewave, main.languages);
         }
     },
-    template: '<div class="div_right_bottom"><span class="button-dropdown" data-buttons="dropdown"><button class="button button-rounded button-square" id="re-wave"><i class="fa fa-caret-down"></i></button><ul class="button-dropdown-list"><li><button id="gotoTop" onclick="backtotop()" class="button button-square"><i class="fa fa-arrow-up"></i></button></li><li><button class="button button-square" id="re-wave-setting"><i class="fa fa-cog"></i></button></li><li v-for="butt in buttonsinvue"><button class="button button-square" v-bind:id="butt.id"><i class="fa" v-bind:class="butt.icon"></i></button></li><li><button class="button button-square" id="re-wave-github" onclick="window.open(\'https://github.com/PCWMXPY/Notebook.md\')"><i class="fa fa-github"></i></button></li></ul></span><button v-on:click="updatebutton" id="re-waveupdatebutton" style="display:none;"></button></div>'
+    template: '<div class="div_right_bottom"><span class="button-dropdown" data-buttons="dropdown"><button class="button button-rounded button-square" v-on:click="displaytips" id="re-wave"><i class="fa fa-caret-down"></i></button><ul class="button-dropdown-list"><li><button id="gotoTop" onclick="backtotop()" class="button button-square"><i class="fa fa-arrow-up"></i></button></li><li><button class="button button-square" id="re-wave-setting"><i class="fa fa-cog"></i></button></li><li v-for="butt in buttonsinvue"><button class="button button-square" v-bind:id="butt.id" v-on:click="butt.fun"><i class="fa" v-bind:class="butt.icon"></i></button></li><li><button class="button button-square" id="re-wave-github" onclick="window.open(\'https://github.com/PCWMXPY/Notebook.md\')"><i class="fa fa-github"></i></button></li></ul></span><button v-on:click="updatebutton" id="re-waveupdatebutton" style="display:none;"></button></div>'
 });
-const displaytips = (rewave, display, language) => {
-    const length = display.length;
+const displaytips = (rewave, language) => {
+    const length = rewave.length;
     const lan = (language == 'chinese') ? languages.test.cn : languages.test.en;
     for (let i = -1; i < length + 1; i++) {
         if (i == -1) {
@@ -43,8 +46,9 @@ const displaytips = (rewave, display, language) => {
                 });
             }, i * 100 + 200);
         } else {
+            const smalllan = (language == 'chinese') ? rewave[i].tips.cn : rewave[i].tips.en
             setTimeout(() => {
-                layer.tips(display[i], '#' + rewave[i].id, {
+                layer.tips(smalllan, '#' + rewave[i].id, {
                     tips: 4,
                     tipsMore: true
                 });
@@ -328,7 +332,6 @@ const languages = {
     },
     ob: {
         cn: {
-            rewave: ['切换语言'],
             how: '我该怎么使用这串代码?',
             publish: '我也想在 Review.md 上发布题目!',
             above: '上面这串怕不是真的神秘代码?',
@@ -342,7 +345,6 @@ const languages = {
             start: '现在就开始 '
         },
         en: {
-            rewave: ['Switch Language'],
             how: 'How to use this code?',
             publish: 'I want to publish my Quiz to Review.md too!',
             above: 'OMG, is the real MYSTERYY CODE?????',

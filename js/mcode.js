@@ -11,42 +11,41 @@ jQuery(document).ready(function () {
     if (getURLVar('mode') != null) title.mode = getURLVar('mode');
     if (getURLVar('language') != null) title.languages = getURLVar('language');
     $.backstretch("../imgs/indexbg.jpg");
-    document.getElementById('languagec').addEventListener('click', function () {
+    title.updatelanguage();
+});
+const remakebutton = () => {
+    rewave.push({
+        icon: 'fa-random',
+        id: 'massup',
+        fun: () => {
+            app.mass();
+        }
+    }, {
+        icon: 'fa-gg-circle',
+        id: 'shufflean',
+        fun: () => {
+            app.massanswer();
+        }
+    }, {
+        icon: 'fa-magic',
+        id: 'shuffleall',
+        fun: () => {
+            app.massall();
+        }
+    });
+}
+let rewave = [{
+    icon: 'fa-language',
+    fun: () => {
         if (title.languages == 'chinese') {
             title.languages = 'english';
         } else {
             title.languages = 'chinese'
         }
         title.updatelanguage();
-    });
-    document.getElementById('massup').addEventListener('click', function () {
-        app.mass();
-    });
-    document.getElementById('shuffleall').addEventListener('click', function () {
-        app.massall();
-    });
-    document.getElementById('shufflean').addEventListener('click', function () {
-        app.massanswer();
-    });
-    title.updatelanguage();
-});
-let rewave = [{
-        icon: 'fa-language',
-        id: 'languagec'
     },
-    {
-        icon: 'fa-random',
-        id: 'massup'
-    },
-    {
-        icon: 'fa-gg-circle',
-        id: 'shufflean'
-    },
-    {
-        icon: 'fa-magic',
-        id: 'shuffleall'
-    }
-];
+    id: 'languagec'
+}];
 var back = new Vue({
     el: '#back',
     data: {
@@ -93,6 +92,7 @@ var title = new Vue({
                     app.tests = data.questions;
                     title.mode = 'answer';
                     title.testname = data.examname;
+                    remakebutton();
                 } else {
                     title.mode = 'debug';
                 }

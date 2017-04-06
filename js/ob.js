@@ -11,24 +11,24 @@ let control = {
 jQuery(document).ready(function () {
     $.backstretch("../../imgs/indexbg.jpg");
     if (getURLVar('language') != null) main.languages = getURLVar('language');
-    document.getElementById('languagec').addEventListener('click', () => {
+    main.getexamlist();
+    main.updatelanguage();
+});
+let rewave = [{
+    icon: 'fa-language',
+    id: 'languagec',
+    tips: {
+        cn: '切换语言',
+        en: 'Switch Language'
+    },
+    fun: () => {
         if (main.languages == 'chinese') {
             main.languages = 'english';
         } else {
             main.languages = 'chinese'
         }
         main.updatelanguage();
-    });
-    document.getElementById('re-wave').addEventListener('click', () => {
-        displaytips(rewave, main.display.rewave, main.languages);
-    });
-    // main.tesst();
-    main.getexamlist();
-    main.updatelanguage();
-});
-let rewave = [{
-    icon: 'fa-language',
-    id: 'languagec'
+    }
 }];
 var main = new Vue({
     el: '#main',
