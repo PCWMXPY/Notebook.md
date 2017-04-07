@@ -10,7 +10,21 @@ jQuery(document).ready(function () {
     main.systemlanguage();
     main.updatedisplay();
     main.updatesolgan();
-    document.getElementById('re-repeat').addEventListener('click', function () {
+    document.getElementById('re-wave').addEventListener('click', () => {
+        displaytips(rewave, main.languages);
+    });
+});
+const testdonate = function () {
+    console.log('test');
+    return 0;
+}
+const rewave = [{
+    icon: 'fa-bath',
+    tips: {
+        cn: '循环标语',
+        en: 'Rotate Slogan'
+    },
+    fun: () => {
         if (recstat == -1) {
             let target = [];
             if (main.languages == 'chinese') {
@@ -26,14 +40,7 @@ jQuery(document).ready(function () {
             clearInterval(recstat);
             recstat = -1;
         }
-    });
-});
-const testdonate = function () {
-    console.log('test');
-    return 0;
-}
-const rewave = [{
-    icon: 'fa-bath',
+    },
     id: 're-repeat'
 }];
 var recstat = -1;

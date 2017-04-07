@@ -4,6 +4,9 @@
 
 ### CHANGELOG
 
+-   Version 1.2.2
+    -   Push new feature to all pages
+    -   Switch language select tips panel
 -   Version 1.2.1
     -   HUGE PROGRASSIVE
     -   Update ob page to observe all available mystery code

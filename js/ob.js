@@ -13,13 +13,16 @@ jQuery(document).ready(function () {
     if (getURLVar('language') != null) main.languages = getURLVar('language');
     main.getexamlist();
     main.updatelanguage();
+    document.getElementById('re-wave').addEventListener('click', () => {
+        displaytips(rewave, main.languages);
+    });
 });
 let rewave = [{
     icon: 'fa-language',
     id: 'languagec',
     tips: {
-        cn: '切换语言',
-        en: 'Switch Language'
+        en: '切换语言',
+        cn: 'Switch Language'
     },
     fun: () => {
         if (main.languages == 'chinese') {

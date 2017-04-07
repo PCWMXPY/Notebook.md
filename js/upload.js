@@ -21,42 +21,60 @@ jQuery(document).ready(function () {
     if (getURLVar('mode') != null) title.mode = getURLVar('mode');
     if (getURLVar('language') != null) title.languages = getURLVar('language');
     $.backstretch("../imgs/indexbg.jpg");
-    document.getElementById('languagec').addEventListener('click', function () {
+    title.updatelanguage();
+    document.getElementById('re-wave').addEventListener('click', () => {
+        displaytips(rewave, title.languages);
+    });
+});
+const remakebutton = () => {
+    rewave.push({
+        icon: 'fa-random',
+        id: 'massup',
+        tips: {
+            cn: '打乱题目',
+            en: 'Shuffle Quations'
+        },
+        fun: () => {
+            app.mass();
+        }
+    }, {
+        icon: 'fa-gg-circle',
+        id: 'shufflean',
+        tips: {
+            cn: '打乱选项',
+            en: 'Shuffle Answers'
+        },
+        fun: () => {
+            app.massanswer();
+        }
+    }, {
+        icon: 'fa-magic',
+        id: 'shuffleall',
+        tips: {
+            cn: '打乱题目和选项',
+            en: 'Shuffle Question and Answers'
+        },
+        fun: () => {
+            app.massall();
+        }
+    });
+}
+let rewave = [{
+    icon: 'fa-language',
+    tips: {
+        en: '切换语言',
+        cn: 'Switch Language'
+    },
+    fun: () => {
         if (title.languages == 'chinese') {
             title.languages = 'english';
         } else {
             title.languages = 'chinese'
         }
         title.updatelanguage();
-    });
-    document.getElementById('massup').addEventListener('click', function () {
-        app.mass();
-    });
-    document.getElementById('shuffleall').addEventListener('click', function () {
-        app.massall();
-    });
-    document.getElementById('shufflean').addEventListener('click', function () {
-        app.massanswer();
-    });
-    title.updatelanguage();
-});
-let rewave = [{
-        icon: 'fa-language',
-        id: 'languagec'
     },
-    {
-        icon: 'fa-random',
-        id: 'massup'
-    },
-    {
-        icon: 'fa-gg-circle',
-        id: 'shufflean'
-    },
-    {
-        icon: 'fa-magic',
-        id: 'shuffleall'
-    }
-];
+    id: 'languagec'
+}];
 var title = new Vue({
     el: '#title',
     data: {
@@ -79,6 +97,7 @@ var title = new Vue({
         },
         getquestions: function () {
             document.getElementById('input').click();
+            remakebutton();
         },
         add: function (object) {
             for (let i = 0; i < object.questions.length; i++) {

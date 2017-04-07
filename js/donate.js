@@ -9,14 +9,25 @@ jQuery(document).ready(function () {
     // $.backstretch("../imgs/indexbg.jpg");
     main.updatelanguage();
     if (getURLVar('language') != null) main.languages = getURLVar('language');
-    main.updatelanguage();
-    document.getElementById('languagec').addEventListener('click', function () {
-        main.changelanguage();
+    document.getElementById('re-wave').addEventListener('click', () => {
+        displaytips(rewave, main.languages);
     });
 });
 let rewave = [{
     icon: 'fa-language',
-    id: 'languagec'
+    id: 'languagec',
+    tips: {
+        en: '切换语言',
+        cn: 'Switch Language'
+    },
+    fun: () => {
+        if (main.languages == 'chinese') {
+            main.languages = 'english';
+        } else {
+            main.languages = 'chinese'
+        }
+        main.updatelanguage();
+    }
 }];
 var main = new Vue({
     el: '#title',

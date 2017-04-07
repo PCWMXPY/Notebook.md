@@ -12,23 +12,38 @@ jQuery(document).ready(function () {
     if (getURLVar('language') != null) title.languages = getURLVar('language');
     $.backstretch("../imgs/indexbg.jpg");
     title.updatelanguage();
+    document.getElementById('re-wave').addEventListener('click', () => {
+        displaytips(rewave, title.languages);
+    });
 });
 const remakebutton = () => {
     rewave.push({
         icon: 'fa-random',
         id: 'massup',
+        tips: {
+            cn: '打乱题目',
+            en: 'Shuffle Quations'
+        },
         fun: () => {
             app.mass();
         }
     }, {
         icon: 'fa-gg-circle',
         id: 'shufflean',
+        tips: {
+            cn: '打乱选项',
+            en: 'Shuffle Answers'
+        },
         fun: () => {
             app.massanswer();
         }
     }, {
         icon: 'fa-magic',
         id: 'shuffleall',
+        tips: {
+            cn: '打乱题目和选项',
+            en: 'Shuffle Question and Answers'
+        },
         fun: () => {
             app.massall();
         }
@@ -36,6 +51,10 @@ const remakebutton = () => {
 }
 let rewave = [{
     icon: 'fa-language',
+    tips: {
+        en: '切换语言',
+        cn: 'Switch Language'
+    },
     fun: () => {
         if (title.languages == 'chinese') {
             title.languages = 'english';
