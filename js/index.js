@@ -11,14 +11,36 @@ jQuery(document).ready(function () {
     main.updatedisplay();
     main.updatesolgan();
     document.getElementById('re-wave').addEventListener('click', () => {
-        displaytips(rewave, main.languages);
+        if (bases.hinted == 0) {
+            displaytips(rewave, main.languages);
+            bases.hinted = 1;
+            setTimeout(() => {
+                rewave.push({
+                    icon: 'fa-question',
+                    tips: {
+                        cn: '再显示一次帮助',
+                        en: 'Rotate Slogan'
+                    },
+                    fun: () => {
+                        bases.hinted = 2;
+                        setTimeout(() => {
+                            document.getElementById('re-wave').click();
+                        }, 0)
+                    },
+                    id: 're-hint'
+                });
+            }, (2700 + rewave.length * 500));
+        } else if (bases.hinted == 2) {
+            displaytips(rewave, main.languages);
+            bases.hinted = 1;
+        }
     });
 });
 const testdonate = function () {
     console.log('test');
     return 0;
 }
-const rewave = [{
+let rewave = [{
     icon: 'fa-bath',
     tips: {
         cn: '循环标语',
