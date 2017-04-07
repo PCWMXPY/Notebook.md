@@ -13,6 +13,9 @@ Vue.component('re-credit', {
 let bases = {
     hinted: 0
 }
+const handshow = () => {
+    document.getElementById('re-wave').click();
+}
 Vue.component('re-wave', {
     data: function () {
         return {
