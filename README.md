@@ -4,6 +4,8 @@
 
 ### CHANGELOG
 
+-   Version 1.2.5
+    -   Fix minor display bug
 -   Version 1.2.4
     -   Add one time use hint for index page
     -   Convert function together to save flow

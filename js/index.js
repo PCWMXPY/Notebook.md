@@ -19,7 +19,7 @@ jQuery(document).ready(function () {
                     icon: 'fa-question',
                     tips: {
                         cn: '再显示一次帮助',
-                        en: 'Rotate Slogan'
+                        en: 'Show Tips Again'
                     },
                     fun: () => {
                         bases.hinted = 2;
