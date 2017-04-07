@@ -1,5 +1,5 @@
 {
-    "name": "review",
-    "version": "0.1.0",
+    "name": "reviewmd",
+    "version": "1.2.4",
     "main": "./app.js"
 }

@@ -23,10 +23,10 @@ jQuery(document).ready(function () {
     $.backstretch("../imgs/indexbg.jpg");
     title.updatelanguage();
     document.getElementById('re-wave').addEventListener('click', () => {
-        if (bases.hinted == 0) {
-            displaytips(rewave, title.languages);
-            bases.hinted = 1;
-        }
+        // if (bases.hinted == 0) {
+        displaytips(rewave, title.languages);
+        bases.hinted = 1;
+        // }
     });
 });
 const remakebutton = () => {

@@ -4,6 +4,12 @@
 
 ### CHANGELOG
 
+-   Version 1.2.4
+    -   Add one time use hint for index page
+    -   Convert function together to save flow
+    -   Todo: Mix upload and mcode to one single page with different mode
+-   Version 1.2.3
+    -   Fix minor bugs
 -   Version 1.2.2
     -   Push new feature to all pages
     -   Switch language select tips panel
