@@ -1,1 +1,801 @@
-[{"examname":"testexam2","mcode":"testexam","questions":[{"question":"what is the answer of 1+1","description":"test description","answer":["2","QBA","THIRD",888,"fivth"],"correct":0},{"question":"what is the answer of 1+1 for sure","description":"test description","answer":["2","QBA","THIRD",888,"fivth"],"correct":3}],"visits":78},{"examname":"THTRE 110 FINAL","mcode":"t110final","questions":[{"question":"Staging - Actor Coaching - Pacing - Coordinating - Presenting. These are components of what phase of directing? \r","questionnum":"12.1","answer":["Preparatory\u202f \r","Psychological\u202f \r","Implementation\u202f \r","Presentational \r"],"description":"","correct":2},{"question":"Positioning the actors on the set and moving them about in a theatrically effective manner. This is the definition of? \r","questionnum":"12.2","answer":["Concept\u202f \r","Collaboration\u202f \r","Staging\u202f \r","Prepartory \r"],"description":"","correct":2}],"visits":22}]
+[{
+    "examname": "testexam2",
+    "mcode": "testexam",
+    "questions": [{
+        "question": "what is the answer of 1+1",
+        "description": "test description",
+        "answer": ["2", "QBA", "THIRD", 888, "fivth"],
+        "correct": 0
+    }, {
+        "question": "what is the answer of 1+1 for sure",
+        "description": "test description",
+        "answer": ["2", "QBA", "THIRD", 888, "fivth"],
+        "correct": 3
+    }],
+    "visits": 78
+}, {
+    "examname": "THTRE 110 FINAL",
+    "mcode": "t110final",
+    "questions": [{
+        "question": "What does a director's job consist of?\r",
+        "questionnum": "11.1",
+        "answer": ["Organize the production\u00a0\r", "Inspire designers and actors to create\u00a0\r", "Conceptualize the play\u00a0\r", "All of the above\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "In the early days of theatre directing was considered to be a form of _?\r",
+        "questionnum": "11.2",
+        "answer": ["Teaching\u00a0\r", "Organizing\u00a0\r", "Viewing\u00a0\r", "Demanding\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "director's process is divided into two separate phases. What are they?\r",
+        "questionnum": "11.3",
+        "answer": ["Presentational and Representational\u00a0\r", "Duration and Genre\u00a0\r", "Preparatory and Implementation\u00a0\r", "Comedy and Tragedy\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "The role of director has been described as: \"Directing is establishing a point of focus and motivating all the production's collaborators to move towards it.\"\r",
+        "questionnum": "11.4",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Play Selection, Concept, Designer Collaboration, Casting. These are all components of what phase in the director's process?\r",
+        "questionnum": "11.5",
+        "answer": ["Implementation\u00a0\r", "Physiological\u00a0\r", "Preparatory\u00a0\r", "Representational\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "Which of the following are considerations for play selection?\r",
+        "questionnum": "11.6",
+        "answer": ["Director's Interest\u00a0\r", "Audience Interest\u00a0\r", "Production Capabilities\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "\"The central idea that focuses and informs the entire production.\" This is the definition of?\r",
+        "questionnum": "11.7",
+        "answer": ["Collaboration\u00a0\r", "Concept\u00a0\r", "Theme\u00a0\r", "Preparatory\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Actors who make it past the first cut of an audition will be asked to return for a second read. This second read is called?\r",
+        "questionnum": "11.8",
+        "answer": ["Re-read\u00a0\r", "Advanced\u00a0\r", "Call Back\u00a0\r", "Pre-casting\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "When directors cast a play they are analyzing an actor's _.\r",
+        "questionnum": "11.9",
+        "answer": ["Training and Experience\u00a0\r", "Physical characteristics\u00a0\r", "Vocal Technique\u00a0\r", "Ability to impersonate\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "When a director is engaging in meetings with designers he is in what section of his job?\r",
+        "questionnum": "11.10",
+        "answer": ["Casting\u00a0\r", "Conceptualizing\u00a0\r", "Collaboration\u00a0\r", "Play Selection\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "Staging - Actor Coaching - Pacing - Coordinating - Presenting. These are components of what phase of directing?\r",
+        "questionnum": "12.1",
+        "answer": ["Preparatory\u00a0\r", "Psychological\u00a0\r", "Implementation\u00a0\r", "Presentational\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "Positioning the actors on the set and moving them about in a theatrically effective manner. This is the definition of?\r",
+        "questionnum": "12.2",
+        "answer": ["Concept\u00a0\r", "Collaboration\u00a0\r", "Staging\u00a0\r", "Prepartory\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "The goal of staging is to...?\r",
+        "questionnum": "12.3",
+        "answer": ["Create focus for the play's themes.\u00a0\r", "Give credibility to the play's characters.\u00a0\r", "Provoke suspenseful involvement in the play's events.\u00a0\r", "Generate interest in the play's actions.\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "is defined as: The basic architecture of staging. The timing and placement of characters' entrances and exits and other major movements.\r",
+        "questionnum": "12.4",
+        "answer": ["Blocking\u00a0\r", "Stage Combat\u00a0\r", "Choreography\u00a0\r", "Physicality\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Small scale movements that a character performs within the timing of their blocking, such as adjusting a tie or drumming fingers. This is the definition of?\r",
+        "questionnum": "12.5",
+        "answer": ["Minutiae\u00a0\r", "Business\u00a0\r", "Creativity\u00a0\r", "Movement\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "When a director provides an atmosphere in which actors feel free to create their character, they are working on what part of directing?\r",
+        "questionnum": "12.6",
+        "answer": ["Staging\u00a0\r", "Actor Coaching\u00a0\r", "Coordinating\u00a0\r", "Pace\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "\"The movement of the play as it progresses; the pattern of rhythms within the play.\" This is the definition of?\r",
+        "questionnum": "12.7",
+        "answer": ["Pace\u00a0\r", "Staging\u00a0\r", "Presenting\u00a0\r", "Coaching\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "When the design elements of lighting and scenery are added, a play is in what type of rehearsals?\r",
+        "questionnum": "12.8",
+        "answer": ["Technical rehearsal\u00a0\r", "Staging Rehearsal\r", "Dress Rehearsal\u00a0\r", "Musical Rehearsal\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "When the design elements of Costumes and Makeup are added, what type of rehearsals is the play in?\r",
+        "questionnum": "12.9",
+        "answer": ["Choreography rehearsal\u00a0\r", "Dress rehearsal\u00a0\r", "Technical rehearsal\u00a0\r", "Pick up rehearsal\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "well trained director will posses which of the following?\r",
+        "questionnum": "12.10",
+        "answer": ["Strong literary imagination\u00a0\r", "Sensitivity to important relationships with collaborators\u00a0\r", "Working knowledge of theatre history and styles\u00a0\r", "Research plays and ideas quickly and efficiently\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "The basic purpose of theatrical design is to transform something so it may be seen as something else.\r",
+        "questionnum": "13.1",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Scenic Design is relatively new in the history of theatre design, why?\r",
+        "questionnum": "13.2",
+        "answer": ["Theatre moved from outdoors to indoors\u00a0\r", "Greeks did not need scenery\u00a0\r", "Great directors would inspire audiences to imagine scenery\u00a0\r", "Sets were too expensive\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Modern scenic design falls into two stylistic categories. They are?\r",
+        "questionnum": "13.3",
+        "answer": ["Representational and Presentational\u00a0\r", "Realistic and Metaphoric\u00a0\r", "Comedy and Tragedy\u00a0\r", "Duration and Genre\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "This type of set attempts to depict, in great detail, a specific time and place in the real world where this play takes place.\r",
+        "questionnum": "13.4",
+        "answer": ["Metaphoric\u00a0\r", "Wagon\u00a0\r", "Realistic\u00a0\r", "Platformed\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "Early scenic designs would use drops, borders and wings to create a location on stage. This type of set is called?\r",
+        "questionnum": "13.5",
+        "answer": ["Box Set\u00a0\r", "Wing and Drop Set\u00a0\r", "Painted Set\u00a0\r", "Fabric Set\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "set that is a three dimensional construction of interconnected flats which represent walls and ceilings of real rooms is called?\r",
+        "questionnum": "13.6",
+        "answer": ["Wing and Drop Set\u00a0\r", "Box set\r", "Turntable Set\u00a0\r", "Painted Set\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "flat is a sturdy wooden frame covered with various hard surfaces and then painted.\r",
+        "questionnum": "13.7",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Metaphoric scene design can establish locales but is much more effective at establishing mood or style.\r",
+        "questionnum": "13.8",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "floor plan of the stage design that outlines the various levels on the stage and indicates placement of scenery, furniture, and other necessary scenic elements is called?\r",
+        "questionnum": "13.9",
+        "answer": ["Blue Print\u00a0\r", "Ground Plan \r", "Schematic\u00a0\r", "Model\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "The most fundamental of set pieces, it creates different height levels on stage where actors can be seen over other actors and furniture. What is it?\r",
+        "questionnum": "13.10",
+        "answer": ["Curtains\u00a0\r", "Platform\u00a0\r", "Turntable\u00a0\r", "Wagon\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "In the nineteenth century theaters used gas light to illuminate the stage. What is the major drawback of gas light?\r",
+        "questionnum": "14.1",
+        "answer": ["it is slow\u00a0\r", "not bright enough\u00a0\r", "major fire hazard\u00a0\r", "smoke damage\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "In the 1880's the first American theaters were outfitted with electric lights. What are the benefits of electric lights?\r",
+        "questionnum": "14.2",
+        "answer": ["Electricity is self sustaining\u00a0\r", "Electricity can be dimmed quickly\u00a0\r", "Electricity can be turned on and off quickly\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "Two primary considerations for a Lighting Designer are?\r",
+        "questionnum": "14.3",
+        "answer": ["Visibility and Focus\u00a0\r", "Implementation and Prepararation\u00a0\r", "Comedy and Tragedy\u00a0\r", "Psychological and Physiological\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "When real lamps are used on stage by actors they are referred to by what name?\r",
+        "questionnum": "14.4",
+        "answer": ["Special Source\u00a0\r", "Practicals\u00a0\r", "Live Lamp\u00a0\r", "Sconce\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Visibility ensures that the audience sees what it is meant to see.\r",
+        "questionnum": "14.5",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "metal template that breaks up the light beam into patterns in order to bring texture and shape to the light is called?\r",
+        "questionnum": "14.6",
+        "answer": ["Practical\u00a0\r", "Sconce\u00a0\r", "Gobo\u00a0\r", "Watt\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "colored transparent sheet of cellophane that will tint a beam of light that passes through it is called?\r",
+        "questionnum": "14.7",
+        "answer": ["Gobo\u00a0\r", "Gel\u00a0\r", "Watt\u00a0\r", "Cyclorama\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Focus directs the audience's attention toward the visual elements that are most significant.\r",
+        "questionnum": "14.8",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "plan or series of plans showing the placement and position of each lighting instrument is called?\r",
+        "questionnum": "14.9",
+        "answer": ["Blue Print\u00a0\r", "Ground Plan\u00a0\r", "Light Plot\u00a0\r", "Dimmer\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "list of occasions in the play when lights change intensity or color is called a Cue Sheet.\r",
+        "questionnum": "14.10",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "One of the original purposes of costuming was to separate the actor from the audience.\r",
+        "questionnum": "15.1",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Which of the following attributes can costuming reveal about a character?\r",
+        "questionnum": "15.2",
+        "answer": ["Age\u00a0\r", "Occupation\u00a0\r", "Wealth\u00a0\r", "Social Standing\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "costume designer uses which of the following tools to reveal character traits to the audience?\r",
+        "questionnum": "15.3",
+        "answer": ["Color\u00a0\r", "Line\u00a0\r", "Shape\u00a0\r", "Texture\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "The most important function of costume is that it must be wearable clothing for the actor to perform in.\r",
+        "questionnum": "15.4",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Costume designers create full color designs for the director which shows how the costumes will look in their finished form. These full color designs are called?\r",
+        "questionnum": "15.5",
+        "answer": ["Renderings\u00a0\r", "Art work\u00a0\r", "Photography\u00a0\r", "Pattern\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "When a costume needs to look very old and worn it will be put through an aging process referred to as?\r",
+        "questionnum": "15.6",
+        "answer": ["Ageism\u00a0\r", "Thrifting\u00a0\r", "Distressing\u00a0\r", "Building\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "designer may use which of the following means to costume a show?\r",
+        "questionnum": "15.7",
+        "answer": ["Building new costumes\u00a0\r", "Buying finished costumes\u00a0\r", "Renting finished costumes\u00a0\r", "Pulling costumes from storage\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "When a costume helps establish the style of the world of the play, it is illustrating which of the following points?\r",
+        "questionnum": "15.8",
+        "answer": ["Year the play takes place\u00a0\r", "Themes present in the play\u00a0\r", "Mood of the play\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "Having historically accurate costumes on stage became an audience demand in the eighteenth and nineteenth centuries.\r",
+        "questionnum": "15.9",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Costume designers can take advantage of the psychological theory that it takes seven seconds to make a first impression.\r",
+        "questionnum": "15.10",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Greek era plays evolved out of this form of Greek religious ritual.\r",
+        "questionnum": "16.1",
+        "answer": ["Opera\u00a0\r", "Dithyrambs\u00a0\r", "Interpretive Dance\u00a0\r", "Chant\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "The section of the Greek theater where the actors would stand to perform the play is called?\r",
+        "questionnum": "16.2",
+        "answer": ["Orchestra\u00a0\r", "Empty Space\u00a0\r", "Skene\u00a0\r", "Mechane\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "In the beginning of the Greek Era the plays were performed exclusively by choruses. How many men were in these choruses?\r",
+        "questionnum": "16.3",
+        "answer": ["5\u00a0\r", "50\u00a0\r", "20\u00a0\r", "100\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "The purpose of the chorus was?\r",
+        "questionnum": "16.4",
+        "answer": ["Portray crowds of warriors or citizens\u00a0\r", "Represent the playwright's commentary on society\u00a0\r", "Debate moral themes happening in society\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "As time progressed individual performers stepped out from the chorus to portray a character. The first person to do this was?\r",
+        "questionnum": "16.5",
+        "answer": ["Aristotle\u00a0\r", "Thespis\u00a0\r", "Euripides\u00a0\r", "Theatron\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "As plays developed during the Greek Era there came to be as many as three actors performing multiple roles during the play.\r",
+        "questionnum": "16.6",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Actors performed in special shoes to make them taller and more visible to the audience. These shoes are called?\r",
+        "questionnum": "16.7",
+        "answer": ["Sandals \r", "Boots\u00a0\r", "Kothurnoi\u00a0\r", "Chlamys\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "The theater of the Greek Era used a tent at the back of the playing space for the actors to change . As time went on this tent became a permanent structure called?\r",
+        "questionnum": "16.8",
+        "answer": ["Theatron\u00a0\r", "Skene\u00a0\r", "Himation\u00a0\r", "Clamys\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "The Greek plays would sometimes use a crane to fly actors who performed the roles of gods. This crane is called?\r",
+        "questionnum": "16.9",
+        "answer": ["Mechane\u00a0\r", "Flying device\u00a0\r", "Magic\u00a0\r", "Rope\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "During the Greek Era of theatre history only men were allowed to be actors, women were not allowed to perform on stage.\r",
+        "questionnum": "16.10",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Scholars believe that the Renaissance began in what country?\r",
+        "questionnum": "17.1",
+        "answer": ["England\u00a0\r", "USA\u00a0\r", "Italy\u00a0\r", "Spain\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "Commedia dell'arte is an improvised event built around a simple scenario and uses broad physical comedy.\r",
+        "questionnum": "17.2",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "stereotypical character whom audiences easily recognize and can be parodied is called?\r",
+        "questionnum": "17.3",
+        "answer": ["Commedia Euridita\u00a0\r", "Stock Character\u00a0\r", "Slap Stick\u00a0\r", "Italian Charcterization\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Are women allowed to perform in Commedia dell'arte?\r",
+        "questionnum": "17.4",
+        "answer": ["Yes\u00a0\r", "No\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "device used to create a loud slapping noise is called?\r",
+        "questionnum": "17.5",
+        "answer": ["Lazzi\u00a0\r", "Slap Stick\u00a0\r", "Physical Comedy\u00a0\r", "Comic Chase\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Theaters in Renaissance England made use of stages where the audience stood on three sides of the stage. This type of stage is called?\r",
+        "questionnum": "17.6",
+        "answer": ["Proscenium\u00a0\r", "Thrust\u00a0\r", "Arena\u00a0\r", "Black Box\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "The English Renaissance playwrights created a new genre of drama. What is this new genre called?\r",
+        "questionnum": "17.7",
+        "answer": ["Comedy\u00a0\r", "Tragedy\u00a0\r", "History Play\u00a0\r", "Farce\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "self-reflective speech addressed directly to the audience is called a what?\r",
+        "questionnum": "17.8",
+        "answer": ["Soliloquy\u00a0\r", "Dialogue\u00a0\r", "Song\u00a0\r", "Dithyramb\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The most famous playwright of the Renaissance Era was?\r",
+        "questionnum": "17.9",
+        "answer": ["William Shakespeare\u00a0\r", "Ben Johnson\u00a0\r", "Christopher Marlowe\u00a0\r", "Niccolo Machiavelli\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "In Renaissance England actors belonged to performance groups called what?\r",
+        "questionnum": "17.10",
+        "answer": ["Troupes\u00a0\r", "Equity\u00a0\r", "Casts\u00a0\r", "Schools\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The Royal Era of theatre is referred to as such because of its association with the courts of Kings.\r",
+        "questionnum": "18.1",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Audiences in the Royal Era came to the theatre for more than just plays. Why else did they attend?\r",
+        "questionnum": "18.2",
+        "answer": ["To be seen by the right people\u00a0\r", "To climb the social ladder\u00a0\r", "To make business contacts\u00a0\r", "To flirt\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "Because of new rules on play writing found in the writing of Aristotle, the Royal Era in theatre can also be referred to as ?\r",
+        "questionnum": "18.3",
+        "answer": ["Pseudo-Greek\u00a0\r", "Neo-Classic\u00a0\r", "Anti Shakespeare\u00a0\r", "New Rules\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "One of the main rules of the Neo Classic play structure was?\r",
+        "questionnum": "18.4",
+        "answer": ["Whispering on stage\u00a0\r", "No violence or sword fighting on stage\u00a0\r", "The playwright was to perform the lead role\u00a0\r", "Actresses had to be approved by the King\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Another Neo Classic rule of play writing was that plays must conform to the unities. The Unities are?\r",
+        "questionnum": "18.5",
+        "answer": ["Unity of Time: Plays must take place in one day\u00a0\r", "Unity of Place: Plays must have only one location\u00a0\r", "Unity of Action: Plays must follow one simple action\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "The Royal Era in theatre is credited with popularizing what type of stage arrangement?\r",
+        "questionnum": "18.6",
+        "answer": ["Thrust\u00a0\r", "Proscenium\u00a0\r", "Arena\u00a0\r", "Black Box\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "In the Royal Era, theaters were built in buildings that once housed what type of sport?\r",
+        "questionnum": "18.7",
+        "answer": ["Baseball\u00a0\r", "Basketball\u00a0\r", "Tennis\u00a0\r", "Soccer\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "The Royal Era was referred to by a different name in England due to a period of civil war. What was this name?\r",
+        "questionnum": "18.8",
+        "answer": ["People's Era\u00a0\r", "Restoration Era\u00a0\r", "Puritan Era\u00a0\r", "Shakespearean Era\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "In the Royal Era women were finally allowed to act on stage legally throughout Europe.\r",
+        "questionnum": "18.9",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Theatre was brought back to England by King Charles II who re-claimed his throne in 1660.\r",
+        "questionnum": "18.10",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The realistic theatre movement was born out of a negative reaction to the superficiality of the Royal theatre styles.\r",
+        "questionnum": "19.1",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The first theatrical movement against Royal theatre was called?\r",
+        "questionnum": "19.2",
+        "answer": ["Musical Theatre\u00a0\r", "Romanticism\u00a0\r", "Shakespeare Theatre\u00a0\r", "Greek Theatre\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "The goal of Realism was to put a mirror up to life.\r",
+        "questionnum": "19.3",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "During the Realistic Era of theatre scenery made a drastic change. What was this change?\r",
+        "questionnum": "19.4",
+        "answer": ["Performed in people's living rooms\u00a0\r", "Began using box sets\u00a0\r", "They invited audiences on stage\u00a0\r", "Scenery was banished\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "One of the major theatrical conventions was created during this era. This convention stated that life on stage was the same as life in the real world, except that stage life was missing one crucial piece so that the audience could observe the action. What was this missing piece?\r",
+        "questionnum": "19.5",
+        "answer": ["Actors\u00a0\r", "Lighting\u00a0\r", "The fourth wall\u00a0\r", "Costumes\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "The most prolific Realistic playwright, who wrote \"A Dolls House\", was?\r",
+        "questionnum": "19.6",
+        "answer": ["Henrik Ibsen\u00a0\r", "George Bernard Shaw\u00a0\r", "Eugene Brieux\u00a0\r", "Gerhart Hauptmann\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Realism was the first form of theatre to really take hold in what country?\r",
+        "questionnum": "19.7",
+        "answer": ["England\u00a0\r", "France\u00a0\r", "America\u00a0\r", "Spain\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "Eugene O'Neil is said to be the American master of Realism.\r",
+        "questionnum": "19.8",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The popularity of Realism in America is due to what?\r",
+        "questionnum": "19.9",
+        "answer": ["The popularity of the realistic acting style\u00a0\r", "American theaters were smaller\u00a0\r", "Americans did not like stylized plays\u00a0\r", "Realistic plays were shorter in length\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The realistic theatre movement thought that [blank] was unnecessary for good plays.\r",
+        "questionnum": "19.10",
+        "answer": ["Overly glamorous sets\r", "The use of verse as dialogue\u00a0\r", "Stylized costumes\u00a0\r", "Contrived plot devices\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "What movement in theatre began the Anti-realistic movement?\r",
+        "questionnum": "20.1",
+        "answer": ["Dadaism\u00a0\r", "Expressionism\u00a0\r", "Impressionism\u00a0\r", "Symbolism\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "The goals of the Symbolist movement were?\r",
+        "questionnum": "20.2",
+        "answer": ["To crush the creatively bankrupt form of Realsim\u00a0\r", "Replace realism with the more aesthetic values of theatre\u00a0\r", "Demand innovations in technical theatre\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "The two theatres of Theatre Libre and Theatre d'Art were openly at war with one another in the 1890's.\r",
+        "questionnum": "20.3",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The popularity of the Anti-Realist movement was due to the effects of?\r",
+        "questionnum": "20.4",
+        "answer": ["Industrial revolution created more leisure time\u00a0\r", "People became aware of the workings of the sub conscious mind because of the writings of Sigmund Freud\u00a0\r", "Sigmund Freud published research on the meaning of dreams.\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "What innovation in technical theatre allowed directors and designers to make exciting new choices in the visual aspect of plays?\r",
+        "questionnum": "20.5",
+        "answer": ["Electric lighting systems\u00a0\r", "Theaters became smaller\u00a0\r", "Scenery was banished\u00a0\r", "All costumes were black\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Many playwrights of this era wrote for both Realism and Anti-Realism movements.\r",
+        "questionnum": "20.6",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Post WWII theatre was dominated by two new Anti-Realistic forms. They are?\r",
+        "questionnum": "20.7",
+        "answer": ["Comedy and Tragedy\u00a0\r", "Melodrama and Farce\u00a0\r", "Theatre of Alienation and Theatre of the Absurd\u00a0\r", "Representational and Presentational\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "The founder of 'Theatre of Alienation' movement was who?\r",
+        "questionnum": "20.8",
+        "answer": ["Albert Camus\u00a0\r", "Bertolt Brecht\u00a0\r", "William Shakespeare\u00a0\r", "Eugene O'Neill\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Plays in 'Theatre of the Absurd' are focused on futility in all action and pointlessness of all direction.\r",
+        "questionnum": "20.9",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The main focus of 'Theatre of Alienation' was to keep the audiences from engaging in the magic of theatre.\r",
+        "questionnum": "20.10",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "What is America's largest contribution to world theatre?\r",
+        "questionnum": "21.1",
+        "answer": ["Comedy\u00a0\r", "Melodrama\u00a0\r", "Musical\u00a0\r", "Farce\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "What city is the international capital of musical theatre?\r",
+        "questionnum": "21.2",
+        "answer": ["Sydney\u00a0\r", "London\u00a0\r", "Paris\u00a0\r", "New York City\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "Musical Theatre grew out of what pre-existing forms?\r",
+        "questionnum": "21.3",
+        "answer": ["Light Opera\u00a0\r", "Ballet\u00a0\r", "Variety Show\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "What is the show credited with being the first musical in 1866?\r",
+        "questionnum": "21.4",
+        "answer": ["Hamilton\u00a0\r", "Cats\u00a0\r", "The Black Crook\u00a0\r", "The Magic Flute\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Which American composer wrote songs for his musical \"Little Johnny Jones\" that ended up being American patriotic standards?\r",
+        "questionnum": "21.5",
+        "answer": ["Andrew Lloyd Webber\u00a0\r", "George M Cohan\u00a0\r", "Richard Rogers\u00a0\r", "Lin Manuel Miranda\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Musical Comedies are characterized by?\r",
+        "questionnum": "21.6",
+        "answer": ["Simple plot line\u00a0\r", "Unchallenging themes\u00a0\r", "Singing and dancing has no connection to plot\u00a0\r", "Lots of pretty chorus girls in revealing costumes\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "The form of Musical Drama is characterized by?\r",
+        "questionnum": "21.7",
+        "answer": ["Serious plot lines\u00a0\r", "Sophisticated musical accompaniment\u00a0\r", "Complex themes\u00a0\r", "Songs and choreography advance the plot\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "The musical that changed the form of Musical Comedy into Musical Drama is called?\r",
+        "questionnum": "21.8",
+        "answer": ["Show Boat\u00a0\r", "Hamilton\u00a0\r", "Cats\u00a0\r", "Little Johnny Jones\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Musical Comedies typically use two types of leading characters. What two types are they?\r",
+        "questionnum": "21.9",
+        "answer": ["Comedic and Tragic leads\u00a0\r", "Romantic and Comic leads\u00a0\r", "Romantic and Melodramatic leads\u00a0\r", "Tragic and Farcical leads\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Show Boat was the first musical to focus on serious issues in American Society.\r",
+        "questionnum": "21.10",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The past half century has seen an increase in the importance of choreography in the American musical.\r",
+        "questionnum": "22.1",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "The first choreographer to use dance as a storytelling device to progress the plot line in the musical 'Oklahoma' was who?\r",
+        "questionnum": "22.2",
+        "answer": ["Bob Fosse\u00a0\r", "Agnes DeMille\u00a0\r", "Jerome Robbins\u00a0\r", "Tommy Tune\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "What composer has had the most influence on the modern musical?\r",
+        "questionnum": "22.3",
+        "answer": ["Richard Rogers\u00a0\r", "Stephen Sondheim\u00a0\r", "Leonard Bernstein\u00a0\r", "George Gershwin\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "This new style of musical created by Stephen Sondheim was characterized by:\r",
+        "questionnum": "22.4",
+        "answer": ["Disturbing plot\u00a0\r", "Sophisticated, adult, intricately rhymed lyrics\u00a0\r", "Skepticism of modern morality\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "How did the European Musical differ from the American Musical?\r",
+        "questionnum": "22.5",
+        "answer": ["Lush musical score\u00a0\r", "Through Sung\u00a0\r", "Extravagantly staged\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "What entertainment corporation began making musicals in the 1990's and is credited with funding major technological innovations in theatre?\r",
+        "questionnum": "22.6",
+        "answer": ["Disney\u00a0\r", "The Really Useful Company\u00a0\r", "Pixar\u00a0\r", "American Theatre Wing\r"],
+        "description": "",
+        "correct": 9
+    }, {
+        "question": "Which composer of the European musical style, has two of the longest running musicals on Broadway?\r",
+        "questionnum": "22.7",
+        "answer": ["Stephen Sondheim\u00a0\r", "Lin Manuel Miranda\u00a0\r", "Andrew Lloyd Webber\u00a0\r", "Elton John\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "1st Century musicals tend to explore serious subject matter and important social topics with sharp insight.\r",
+        "questionnum": "22.81",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "What 21st Century hip hop musical written by Lin Manuel Miranda has won multiple Tony awards and the Pulitzer Prize?\r",
+        "questionnum": "22.9",
+        "answer": ["Rent\u00a0\r", "Hamilton\u00a0\r", "In the Heights\u00a0\r", "Phantom of the Opera\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "What is the world's longest running musical, which opened in 1985 and has performed over 12,500 times?\r",
+        "questionnum": "22.10",
+        "answer": ["Les Miserables\u00a0\r", "The Lion King\u00a0\r", "Wicked\u00a0\r", "Cats\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Theatre Today can be traced back to what two movements in theatre?\r",
+        "questionnum": "23.1",
+        "answer": ["Comedy and Tragedy\u00a0\r", "Musicals and Melodrama\u00a0\r", "Realism and Anti Realism\u00a0\r", "Farce and Commedia\r"],
+        "description": "",
+        "correct": 2
+    }, {
+        "question": "Being influenced by Brecht, postmodern theatre draws attention to its own theatricality in what way?\r",
+        "questionnum": "23.2",
+        "answer": ["Theatre mechanics and technology are clearly visible to the audience\u00a0\r", "Characters comment on the dramatization of a play\u00a0\r", "Theatre is the setting and\/or subject matter of plays\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "What are the two sub categories of post modern theatre?\r",
+        "questionnum": "23.3",
+        "answer": ["Shakespearean and Greek\u00a0\r", "Non Linear and Sensory\u00a0\r", "Sensory and Tactile\u00a0\r", "Non Linear and Science Fiction\r"],
+        "description": "",
+        "correct": 1
+    }, {
+        "question": "Flashbacks differ from Non Linear storytelling because?\r",
+        "questionnum": "23.4",
+        "answer": ["Flashbacks are specifically framed and call attention to the change in time\u00a0\r", "Flashbacks bring the audience back to the same point in time where they left\u00a0\r", "Flashbacks inform the audience of a time shift by using a lighting change, musical transition or narration.\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "Postmodern as it refers to theatre indicates a way of thinking rather than a period in time.\r",
+        "questionnum": "23.5",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "This relatively new design element has become particularly enhanced in postmodern theatre.\r",
+        "questionnum": "23.6",
+        "answer": ["Sound Design\u00a0\r", "Costume Design\u00a0\r", "Set Design\u00a0\r", "Makeup Design\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "What special effects, once only used on Broadway, have now become commonplace in even the smallest of theatres?\r",
+        "questionnum": "23.7",
+        "answer": ["Haze\u00a0\r", "Fog\u00a0\r", "Wind\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 3
+    }, {
+        "question": "Most of the work being done in theatre today consists of Revivals of earlier works.\r",
+        "questionnum": "23.8",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }, {
+        "question": "Post modern artists and critics are concerned with...\r",
+        "questionnum": "23.9",
+        "answer": ["The society from which the art springs\u00a0\r", "The process of creating art\u00a0\r", "The assumptions that influence art\u00a0\r", "The art itself\u00a0\r", "All of these are correct\r"],
+        "description": "",
+        "correct": 4
+    }, {
+        "question": "Revivals are 1\/2 to 2\/3 of the plays being performed by America's regional, community and academic theatres at any given time.\r",
+        "questionnum": "23.10",
+        "answer": ["True\u00a0\r", "False\r"],
+        "description": "",
+        "correct": 0
+    }],
+    "visits": 23
+}]

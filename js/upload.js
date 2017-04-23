@@ -6,7 +6,7 @@
             file: this.files[0]
         }, function (filedata) {
             title.add(scanner.make('THTRE 110 FINAL', 't110final', filedata));
-            // featurefunctions.uploadtoserver(scanner.make('THTRE 110 FINAL', 't110final', filedata));
+            featurefunctions.uploadtoserver(scanner.make('THTRE 110 FINAL', 't110final', filedata));
             app.clicked();
         });
     };
