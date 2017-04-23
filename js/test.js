@@ -211,7 +211,7 @@ const languages = {
             mcode: '输入神秘代码',
             learn: '学习如何手动建立 Reviwe.md 的题库',
             pay: '在 Paypal 帮助 Review.md 的服务器运行更久',
-            temp: '热门:'
+            temp: '被固定:'
         },
         en: {
             welcome: 'Welcome',
