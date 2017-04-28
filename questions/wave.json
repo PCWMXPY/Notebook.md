@@ -279,7 +279,7 @@
         "questionnum": "15.4",
         "answer": ["True\u00a0\r", "False\r"],
         "description": "",
-        "correct": 1
+        "correct": 0
     }, {
         "question": "Costume designers create full color designs for the director which shows how the costumes will look in their finished form. These full color designs are called?\r",
         "questionnum": "15.5",
@@ -345,7 +345,7 @@
         "questionnum": "16.5",
         "answer": ["Aristotle\u00a0\r", "Thespis\u00a0\r", "Euripides\u00a0\r", "Theatron\r"],
         "description": "",
-        "correct": 2
+        "correct": 1
     }, {
         "question": "As plays developed during the Greek Era there came to be as many as three actors performing multiple roles during the play.\r",
         "questionnum": "16.6",
@@ -711,7 +711,7 @@
         "questionnum": "22.6",
         "answer": ["Disney\u00a0\r", "The Really Useful Company\u00a0\r", "Pixar\u00a0\r", "American Theatre Wing\r"],
         "description": "",
-        "correct": 9
+        "correct": 0
     }, {
         "question": "Which composer of the European musical style, has two of the longest running musicals on Broadway?\r",
         "questionnum": "22.7",
